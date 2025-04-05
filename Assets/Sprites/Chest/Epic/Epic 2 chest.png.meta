@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Epic 2 chest_0: -6729175064078254866
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

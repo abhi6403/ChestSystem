@@ -8,18 +8,6 @@ TextureImporter:
   - first:
       213: 7425413949931120437
     second: ButtonBG_1
-  - first:
-      213: -5473391727991956956
-    second: ButtonBG_2
-  - first:
-      213: -1336801579983193295
-    second: ButtonBG_3
-  - first:
-      213: -4679169558567961218
-    second: ButtonBG_4
-  - first:
-      213: -7994697999701655453
-    second: ButtonBG_5
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -131,10 +119,10 @@ TextureImporter:
       name: ButtonBG_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 33
         y: 0
-        width: 1527
-        height: 1024
+        width: 857
+        height: 386
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -153,10 +141,10 @@ TextureImporter:
       name: ButtonBG_1
       rect:
         serializedVersion: 2
-        x: 83
-        y: 726
-        width: 6
-        height: 6
+        x: 715
+        y: 360
+        width: 8
+        height: 7
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -167,94 +155,6 @@ TextureImporter:
       bones: []
       spriteID: 537efdb55ae5c0760800000000000000
       internalID: 7425413949931120437
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ButtonBG_2
-      rect:
-        serializedVersion: 2
-        x: 969
-        y: 682
-        width: 32
-        height: 342
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 42a5a70093b9a04b0800000000000000
-      internalID: -5473391727991956956
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ButtonBG_3
-      rect:
-        serializedVersion: 2
-        x: 81
-        y: 488
-        width: 6
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 13bbbe1bb0ab27de0800000000000000
-      internalID: -1336801579983193295
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ButtonBG_4
-      rect:
-        serializedVersion: 2
-        x: 82
-        y: 100
-        width: 6
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e7d3cb9e310401fb0800000000000000
-      internalID: -4679169558567961218
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ButtonBG_5
-      rect:
-        serializedVersion: 2
-        x: 82
-        y: 46
-        width: 6
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 360c149e6802d0190800000000000000
-      internalID: -7994697999701655453
       vertices: []
       indices: 
       edges: []

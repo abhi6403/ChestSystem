@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Normal chest open-Photoroom_0: 2923927041815457074
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Legendary 2 chest_0: -6535247311556073010
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
