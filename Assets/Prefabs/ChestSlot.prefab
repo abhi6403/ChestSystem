@@ -147,6 +147,7 @@ GameObject:
   - component: {fileID: 6292527421250647277}
   - component: {fileID: 5023498978193686177}
   - component: {fileID: 3981116256148432370}
+  - component: {fileID: 5949830040679103592}
   m_Layer: 5
   m_Name: ChestSlot
   m_TagString: Untagged
@@ -216,6 +217,23 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &5949830040679103592
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 819569760345618627}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd933c50dc988e84887323aa811b958f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _chestClosedSprite: {fileID: 3805992057877503675}
+  _chestOpenSprite: {fileID: 9155025204161696962}
+  _chestTimerText: {fileID: 2063959981719912896}
+  _chestStatusText: {fileID: 7594960870857500106}
+  _chestButton: {fileID: 7697040451462984265}
 --- !u!1 &1603996469376531137
 GameObject:
   m_ObjectHideFlags: 0

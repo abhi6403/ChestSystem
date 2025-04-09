@@ -1,6 +1,9 @@
 using UnityEngine;
 
-public class ChestModel
+namespace ChestSystem.Chest
 {
-    
+    public class ChestModel
+    {
+
+    }
 }

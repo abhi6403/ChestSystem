@@ -5,7 +5,7 @@ namespace ChestSystem.Chest
 {
     [CreateAssetMenu(fileName = "Create New Chest", menuName = "Scriptable Objects/ChestScriptableObject")]
 
-    public class ChestScriptableObject : ScriptableObject
+    public class ChestSO : ScriptableObject
     {
         public Sprite _chestClosedImage;
         public Sprite _chestOpenImage;

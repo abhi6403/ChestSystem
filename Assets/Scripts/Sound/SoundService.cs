@@ -1,6 +1,9 @@
 using UnityEngine;
 
-public class SoundService
+namespace ChestSystem.Sound
 {
-    
+    public class SoundService
+    {
+
+    }
 }
