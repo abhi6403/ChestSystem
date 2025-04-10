@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a069f3fb0aace1643901b34e5dcaebf5, type: 3}
+  m_Name: RareChest
+  m_EditorClassIdentifier: 
+  _chestClosedImage: {fileID: -3813219026397049324, guid: d54de98d328b91746be297a7ecef3a77, type: 3}
+  _chestOpenImage: {fileID: -8389409558146245856, guid: f8c39dd15ec022a439fc02e18595a669, type: 3}
+  _chestType: 1
+  _chestRewards:
+    _minCoins: 300
+    _maxCoins: 500
+    _minGems: 20
+    _maxGems: 40
+  _chestTimer: 0

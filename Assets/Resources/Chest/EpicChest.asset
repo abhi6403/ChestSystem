@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a069f3fb0aace1643901b34e5dcaebf5, type: 3}
+  m_Name: EpicChest
+  m_EditorClassIdentifier: 
+  _chestClosedImage: {fileID: -6729175064078254866, guid: fff9c0d77fadbc64d9a8adb977d10611, type: 3}
+  _chestOpenImage: {fileID: 985233330959644082, guid: bb44f9896159a844a906f5ee73a1b45c, type: 3}
+  _chestType: 2
+  _chestRewards:
+    _minCoins: 600
+    _maxCoins: 800
+    _minGems: 45
+    _maxGems: 60
+  _chestTimer: 0

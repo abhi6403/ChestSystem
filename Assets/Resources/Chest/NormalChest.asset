@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a069f3fb0aace1643901b34e5dcaebf5, type: 3}
+  m_Name: NormalChest
+  m_EditorClassIdentifier: 
+  _chestClosedImage: {fileID: 683673319520019536, guid: 0435e5ff97c020148a7b12e2093279a1, type: 3}
+  _chestOpenImage: {fileID: 2923927041815457074, guid: 04f143b01b6855947afb73f158a942cf, type: 3}
+  _chestType: 0
+  _chestRewards:
+    _minCoins: 100
+    _maxCoins: 200
+    _minGems: 10
+    _maxGems: 20
+  _chestTimer: 30.5

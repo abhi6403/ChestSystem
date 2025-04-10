@@ -172,7 +172,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Coins and Gems-Photoroom_0: 8379603002786551772
+      Coins and Gems-Photoroom_1: -7665215064072849559
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
