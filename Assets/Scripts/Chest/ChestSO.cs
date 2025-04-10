@@ -12,6 +12,7 @@ namespace ChestSystem.Chest
         public ChestType _chestType;
         public ChestRewards _chestRewards;
         public float _chestTimer;
+        
         public ChestView _chestPrefab;
 
         [Serializable]
