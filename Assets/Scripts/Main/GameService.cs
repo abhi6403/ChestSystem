@@ -14,7 +14,7 @@ namespace ChestSystem.Main
         
         [SerializeField] private UIServices uiServices;
         public UIServices UIServices => uiServices;
-
+        
         protected void Awake()
         {
             EventService = new EventService();

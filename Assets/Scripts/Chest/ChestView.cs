@@ -9,17 +9,13 @@ namespace ChestSystem.Chest
     {
         public ChestController _chestController { get; private set; }
         
-        [SerializeField]
-        private Image _chestClosedSprite;
-        [SerializeField]
-        private Image _chestOpenSprite;
-        [SerializeField]
-        private TextMeshProUGUI _chestTimerText;
-        [SerializeField]
-        private TextMeshProUGUI _chestStatusText;
-        [SerializeField]
-        private Button _chestButton;
+        public Image _chestClosedSprite;
+        public Image _chestOpenSprite;
+        public TextMeshProUGUI _chestTimerText;
+        public TextMeshProUGUI _chestStatusText;
+        public Button _chestButton;
         
         public void SetController(ChestController controllerToSet) => _chestController = controllerToSet;
+        
     }
 }
