@@ -1,14 +1,23 @@
 using ChestSystem.Chest;
 using UnityEngine;
 
-public class UIServices : MonoBehaviour
+namespace ChestSystem.UI
 {
-    public ChestSO chestSO;
-    public ChestController chestController;
-    
-    [SerializeField] private Transform _contentTransform;
-    public void CreateChest()
+    public class UIServices : MonoBehaviour
     {
-        chestController = new ChestController(chestSO, _contentTransform);
+        public ChestService _chestService;
+
+        public void Initialize(ChestService chestService)
+        {
+            _chestService = chestService;
+        }
+        public UIServices(ChestService chestService)
+        {
+            _chestService = chestService;
+        }
+        public void CreateChest()
+        {
+            _chestService.CreateChest();
+        }
     }
 }

@@ -10,9 +10,9 @@ namespace ChestSystem.Chest
         private Transform _chestContainer;
         public ChestController(ChestSO chestSO,Transform chestTransform)
         {
+            _chestContainer = chestTransform;
             _chestModel = new ChestModel(chestSO);
             _chestModel.SetController(this);
-            _chestContainer = chestTransform;
             IntializeChestView();
             _chestView.SetController(this);
         }
