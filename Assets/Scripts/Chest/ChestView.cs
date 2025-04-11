@@ -17,5 +17,10 @@ namespace ChestSystem.Chest
         public Button _chestButton;
         
         public void SetController(ChestController controllerToSet) => _chestController = controllerToSet;
+
+        public void Update()
+        {
+            _chestController.Update();
+        }
     }
 }

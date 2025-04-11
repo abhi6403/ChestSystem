@@ -15,6 +15,8 @@ namespace ChestSystem.Chest
         public void SetController(ChestController controllerToSet) => _chestController = controllerToSet;
         
         public void SetChestState(ChestState stateToSet) => _chestState = stateToSet;
+        
+        public void SetChestTimer(float chestTimerToSet) => _chestTimer = chestTimerToSet;
 
         public ChestModel(ChestSO chestSO)
         {
