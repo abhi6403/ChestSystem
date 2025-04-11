@@ -1,8 +1,9 @@
+using System.Threading;
 using UnityEngine;
 
-namespace ChestSystem.Chest
+namespace ChestSystem.StateMachine
 {
-    public enum ChestState
+    public enum States
     {
         LOCKED,
         UNLOCKED,
