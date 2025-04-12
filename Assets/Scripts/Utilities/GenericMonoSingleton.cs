@@ -5,7 +5,7 @@ namespace ChestSystem.Utilities
     public class GenericMonoSingleton<T> : MonoBehaviour where T : GenericMonoSingleton<T>
     {
         private static T _instance;
-        private static T Instance
+        public static T Instance
         {
             get { return _instance; }
         }

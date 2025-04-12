@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace ChestSystem.Events
+namespace ChestSystem.Event
 {
     public class EventService
     {
@@ -19,11 +19,11 @@ namespace ChestSystem.Events
             }
         }
         
-        public EventController OnChestButtonPressed { get; private set; }
+        public EventController OnChestButtonPressedInLockedState { get; private set; }
 
         public EventService()
         {
-            OnChestButtonPressed = new EventController();
+            OnChestButtonPressedInLockedState = new EventController();
         }
     }
 }

@@ -2,16 +2,15 @@ using UnityEngine;
 using System.Collections.Generic;
 using ChestSystem.Sound;
 using ChestSystem.Chest;
-using ChestSystem.Events;
+using ChestSystem.Event;
 using ChestSystem.UI;
 using ChestSystem.Utilities;
 
 namespace ChestSystem.Main
 {
-    public class GameService : GenericMonoSingleton<GameService>
+    public class GameService : MonoBehaviour
     {
         public SoundService SoundService { get; private set; }
-        public EventService EventService { get; private set; }
         public PlayerService PlayerService { get; private set; }
         public ChestService ChestService { get; private set; }
         
@@ -28,7 +27,6 @@ namespace ChestSystem.Main
 
         private void CreateService()
         {
-            EventService = new EventService();
             SoundService = new SoundService();
             PlayerService = new PlayerService();
             ChestService = new ChestService();

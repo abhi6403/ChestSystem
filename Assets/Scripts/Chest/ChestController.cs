@@ -1,4 +1,6 @@
 using ChestSystem.StateMachine;
+using ChestSystem.Event;
+using ChestSystem.Main;
 using UnityEngine;
 
 namespace ChestSystem.Chest
@@ -21,8 +23,18 @@ namespace ChestSystem.Chest
             IntializeChestView();
             _chestView.SetController(this);
             CreateChestStateMachine();
+            Events();
         }
 
+        private void Events()
+        {
+            
+        }
+
+        ~ChestController()
+        {
+            
+        }
         private void IntializeChestView()
         {
             _chestView = Object.Instantiate(_chestModel._chestPrefab, _chestContainer);
@@ -39,9 +51,9 @@ namespace ChestSystem.Chest
         
         private void CreateChestStateMachine() => _chestStateMachine = new ChestStateMachine(this);
        
-        public void UnlockChest()
+        public void ChestButtonPressedInLockedState()
         {
-            _chestStateMachine.ChangeState(States.UNLOCKING);
+            EventService.Instance.OnChestButtonPressedInLockedState.InvokeEvent();
         }
     }
 }

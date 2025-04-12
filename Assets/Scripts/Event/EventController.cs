@@ -1,13 +1,13 @@
 using System;
 using UnityEngine;
 
-namespace ChestSystem.Events
+namespace ChestSystem.Event
 {
     public class EventController
     {
-        public event Action baseEvent;
-        public void InvokeEvent() => baseEvent?.Invoke();
-        public void AddListener(Action listener) => baseEvent += listener;
-        public void RemoveListener(Action listener) => baseEvent -= listener;
+        public event Action BaseEvent;
+        public void InvokeEvent() => BaseEvent?.Invoke();
+        public void AddListener(Action listener) => BaseEvent += listener;
+        public void RemoveListener(Action listener) => BaseEvent -= listener;
     }
 }

@@ -26,9 +26,9 @@ namespace ChestSystem.Chest
             _chestController.Update();
         }
         
-        public void UnlockChest()
+        public void ChestButtonPressedInLockedState()
         {
-            _chestController.UnlockChest();
+            _chestController.ChestButtonPressedInLockedState();
         }
     }
 }
