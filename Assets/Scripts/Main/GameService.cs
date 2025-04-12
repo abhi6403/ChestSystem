@@ -2,6 +2,7 @@ using UnityEngine;
 using System.Collections.Generic;
 using ChestSystem.Sound;
 using ChestSystem.Chest;
+using ChestSystem.Events;
 using ChestSystem.UI;
 using ChestSystem.Utilities;
 
