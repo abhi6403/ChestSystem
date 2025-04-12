@@ -1,3 +1,4 @@
+using ChestSystem.Chest;
 using ChestSystem.Main;
 using ChestSystem.Event;
 using UnityEngine;
@@ -17,29 +18,34 @@ namespace ChestSystem.UI
             private void Start() => SubscribeToEvents();
             private void SubscribeToEvents()
             {
-                _cancelButton.onClick.AddListener(OnCancelButtonClicked);
+                _cancelButton.onClick.AddListener(DisableUI);
                 _unlockButton.onClick.AddListener(OnUnlockButtonClicked);
                 _unlockWithGemsButton.onClick.AddListener(OnUnlockWithGemsButtonClicked);
             }
             
+            public void InitializeImage(ChestModel chestModel)
+            {
+                _chestImage.sprite = chestModel._chestClosedSprite;
+            }
             private void OnUnlockWithGemsButtonClicked()
             {
                 
             }
 
-            private void OnCancelButtonClicked()
+            private void DisableUI()
             {
                 gameObject.SetActive(false);
             }
 
-            public void OnChestButtonClicked()
+            public void EnableUI()
             {
                 gameObject.SetActive(true);
             }
 
             private void OnUnlockButtonClicked()
             {
-                
+                EventService.Instance.OnUnlockButtonClicked.InvokeEvent();
+                DisableUI();
             }
         }
     }

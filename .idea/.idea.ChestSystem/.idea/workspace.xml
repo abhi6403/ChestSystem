@@ -6,18 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="f5f1d404-dcd4-4615-940e-4248ac9cf26e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ChestSystem/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ChestSystem/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ChestSlot.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/ChestSlot.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Chest/ChestController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Chest/ChestController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Chest/ChestView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Chest/ChestView.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Event/EventController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Event/EventController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Event/EventService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Event/EventService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Main/GameService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Main/GameService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/UIServices.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/UIServices.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/UnlockChestUI/UnlockChestUIController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/UnlockChestUI/UnlockChestUIController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/UnlockChestUI/UnlockChestUIView.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/UnlockChestUI/UnlockChestUIView.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utilities/GenericMonoSingleton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utilities/GenericMonoSingleton.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,7 +103,7 @@
       <workItem from="1744249107085" duration="2631000" />
       <workItem from="1744251773321" duration="19629000" />
       <workItem from="1744427766447" duration="8249000" />
-      <workItem from="1744450591149" duration="5251000" />
+      <workItem from="1744450591149" duration="8689000" />
     </task>
     <servers />
   </component>

@@ -24,8 +24,9 @@ namespace ChestSystem.UI
             EventService.Instance.OnChestButtonPressedInLockedState.AddListener(OnChestButtonClicked);
         }
 
-        public void OnChestButtonClicked()
+        public void OnChestButtonClicked(ChestModel chestModel)
         {
+            _unlockChestUIController.InitializeImage(chestModel);
             _unlockChestUIController.gameObject.SetActive(true);
         }
         public void Initialize(ChestService chestService)

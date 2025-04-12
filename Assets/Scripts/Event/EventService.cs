@@ -1,3 +1,4 @@
+using ChestSystem.Chest;
 using UnityEngine;
 
 namespace ChestSystem.Event
@@ -19,11 +20,13 @@ namespace ChestSystem.Event
             }
         }
         
-        public EventController OnChestButtonPressedInLockedState { get; private set; }
+        public EventController OnUnlockButtonClicked { get; private set; }
+        public EventController<ChestModel> OnChestButtonPressedInLockedState { get; private set; }
 
         public EventService()
         {
-            OnChestButtonPressedInLockedState = new EventController();
+            OnUnlockButtonClicked = new EventController();
+            OnChestButtonPressedInLockedState = new EventController<ChestModel>();
         }
     }
 }

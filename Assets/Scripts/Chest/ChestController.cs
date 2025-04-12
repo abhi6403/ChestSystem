@@ -28,7 +28,7 @@ namespace ChestSystem.Chest
 
         private void Events()
         {
-            
+            EventService.Instance.OnUnlockButtonClicked.AddListener(UnlockChest);
         }
 
         ~ChestController()
@@ -53,7 +53,12 @@ namespace ChestSystem.Chest
        
         public void ChestButtonPressedInLockedState()
         {
-            EventService.Instance.OnChestButtonPressedInLockedState.InvokeEvent();
+            EventService.Instance.OnChestButtonPressedInLockedState.InvokeEvent(_chestModel);
+        }
+
+        public void UnlockChest()
+        {
+            _chestStateMachine.ChangeState(States.UNLOCKING);
         }
     }
 }
