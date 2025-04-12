@@ -2,7 +2,7 @@ using System;
 using ChestSystem.Chest;
 using ChestSystem.Event;
 using ChestSystem.StateMachine;
-using ChestSystem.UI.ChestSystem.UI.UnlockChest;
+using ChestSystem.UI.ChestStateUI;
 using UnityEngine;
 
 namespace ChestSystem.UI
@@ -12,10 +12,12 @@ namespace ChestSystem.UI
         public ChestService _chestService;
         
         [SerializeField] private UnlockChestUIController _unlockChestUIController;
+        [SerializeField] private UnlockedChestUIController _unlockedChestUIController;
 
         public void Start()
         {
             _unlockChestUIController.gameObject.SetActive(false);
+            _unlockedChestUIController.gameObject.SetActive(false);
             EventSubscriber();
         }
 

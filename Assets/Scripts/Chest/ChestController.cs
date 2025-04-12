@@ -31,11 +31,7 @@ namespace ChestSystem.Chest
         {
             EventService.Instance.OnUnlockButtonClicked.AddListener(UnlockChest);
         }
-
-        ~ChestController()
-        {
-            
-        }
+        
         private void IntializeChestView()
         {
             _chestView = Object.Instantiate(_chestModel._chestPrefab, _chestContainer);

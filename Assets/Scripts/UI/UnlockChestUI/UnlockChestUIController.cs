@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 namespace ChestSystem.UI
 {
-    namespace ChestSystem.UI.UnlockChest
+    namespace ChestStateUI
     {
         public class UnlockChestUIController : MonoBehaviour
         {

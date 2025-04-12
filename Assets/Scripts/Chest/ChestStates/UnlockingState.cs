@@ -1,4 +1,3 @@
-using ChestSystem.Chest;
 using ChestSystem.StateMachine;
 using UnityEngine;
 
@@ -18,6 +17,8 @@ namespace ChestSystem.Chest
             public void OnStateEnter()
             {
                 _chestTimer = Owner._chestModel._chestTimer;
+                Owner._chestView._chestStatusText.text = States.UNLOCKING.ToString();
+                Owner._chestModel.SetChestState(States.UNLOCKING);
             }
 
             public void Update()
@@ -27,7 +28,16 @@ namespace ChestSystem.Chest
 
             public void OnStateExit()
             {
-
+                if (_chestTimer == 0)
+                {
+                    Owner._chestView._chestStatusText.text = States.UNLOCKED.ToString();
+                    Owner._chestModel.SetChestState(States.UNLOCKED);
+                }
+                else
+                {
+                    Owner._chestView._chestStatusText.text = States.LOCKED.ToString();
+                    Owner._chestModel.SetChestState(States.LOCKED);
+                }
             }
 
             private void StartTimerToUnlockTheChest()
