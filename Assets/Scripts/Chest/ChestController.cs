@@ -23,6 +23,7 @@ namespace ChestSystem.Chest
             IntializeChestView();
             _chestView.SetController(this);
             CreateChestStateMachine();
+            _chestStateMachine.ChangeState(States.LOCKED);
             Events();
         }
 
