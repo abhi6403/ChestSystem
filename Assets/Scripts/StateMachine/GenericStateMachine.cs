@@ -5,7 +5,7 @@ using UnityEditor.VersionControl;
 
 namespace ChestSystem.StateMachine
 {
-    public class GenericStateMachine<T> where T : ChestController
+    public class GenericStateMachine<T> where T : ChestController 
     {
         protected T Owner;
         protected IState currentState;
@@ -24,7 +24,7 @@ namespace ChestSystem.StateMachine
 
         public void ChangeState(States newState) => ChangeState(States[newState]);
 
-        protected void SetOwer()
+        protected void SetOwner()
         {
             foreach (IState state in States.Values)
             {

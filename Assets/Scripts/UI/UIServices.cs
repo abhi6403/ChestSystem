@@ -1,4 +1,5 @@
 using ChestSystem.Chest;
+using ChestSystem.StateMachine;
 using UnityEngine;
 
 namespace ChestSystem.UI
@@ -6,6 +7,7 @@ namespace ChestSystem.UI
     public class UIServices : MonoBehaviour
     {
         public ChestService _chestService;
+        
 
         public void Initialize(ChestService chestService)
         {
@@ -19,5 +21,7 @@ namespace ChestSystem.UI
         {
             _chestService.CreateChest();
         }
+
+        
     }
 }

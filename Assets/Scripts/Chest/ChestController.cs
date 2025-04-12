@@ -1,15 +1,18 @@
+using ChestSystem.StateMachine;
 using UnityEngine;
 
 namespace ChestSystem.Chest
 {
-    public class ChestController
+    public class ChestController 
     {
-        private ChestView _chestView;
-        private ChestModel _chestModel;
+        public ChestView _chestView { get; set; }
+        public ChestModel _chestModel { get; set; }
+        
+        private ChestStateMachine _chestStateMachine;
 
         private Transform _chestContainer;
 
-        private float _chestTimer;
+        
         public ChestController(ChestSO chestSO,Transform chestTransform)
         {
             _chestContainer = chestTransform;
@@ -17,7 +20,7 @@ namespace ChestSystem.Chest
             _chestModel.SetController(this);
             IntializeChestView();
             _chestView.SetController(this);
-            _chestTimer = _chestModel._chestTimer;
+            CreateChestStateMachine();
         }
 
         private void IntializeChestView()
@@ -31,20 +34,14 @@ namespace ChestSystem.Chest
 
         public void Update()
         {
-            StartTimerToUnlockTheChest();
+           _chestStateMachine.Update();
         }
-
-        private void StartTimerToUnlockTheChest()
+        
+        private void CreateChestStateMachine() => _chestStateMachine = new ChestStateMachine(this);
+       
+        public void UnlockChest()
         {
-            _chestTimer -= Time.deltaTime;
-            _chestModel.SetChestTimer(_chestTimer);
-
-            int totalSeconds = Mathf.FloorToInt(_chestTimer);
-            int hours = totalSeconds / 3600;
-            int minutes = (totalSeconds % 3600) / 60;
-            int seconds = totalSeconds % 60;
-            
-            _chestView._chestTimerText.text = string.Format("{0:00}:{1:00}:{2:00}", hours, minutes, seconds);
+            _chestStateMachine.ChangeState(States.UNLOCKING);
         }
     }
 }
