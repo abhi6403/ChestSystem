@@ -1934,6 +1934,7 @@ MonoBehaviour:
   _cancelButton: {fileID: 1955758153}
   _unlockButton: {fileID: 1399800150}
   _unlockWithGemsButton: {fileID: 1483431864}
+  _unlockWithgemsText: {fileID: 1914508011}
 --- !u!1 &1178283984
 GameObject:
   m_ObjectHideFlags: 0

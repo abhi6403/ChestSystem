@@ -29,7 +29,7 @@ namespace ChestSystem.Chest
         
         public void ProcessButtonClicked()
         {
-            if (_chestController._chestModel._chestState == ChestState.LOCKED)
+            if (_chestController._chestModel._chestState == ChestState.LOCKED || _chestController._chestModel._chestState == ChestState.UNLOCKING)
             {
                 _chestController.ChestButtonPressedInLockedState();
             }else if (_chestController._chestModel._chestState == ChestState.UNLOCKED)

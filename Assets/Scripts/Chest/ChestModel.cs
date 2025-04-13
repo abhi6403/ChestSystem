@@ -21,6 +21,7 @@ namespace ChestSystem.Chest
         
         public int _chestCurrentCoins { get; set; }
         public int _chestCurrentGems { get; set; }
+        public int _gemsRequiredToUnlock { get; set; }
         
         public ChestModel(ChestSO chestSO)
         {

@@ -25,7 +25,7 @@ namespace ChestSystem.Chest
 
             public void Update()
             {
-                
+                CalculateRequiredGems();
             }
 
             public void OnStateExit()
@@ -41,6 +41,12 @@ namespace ChestSystem.Chest
                 int seconds = totalSeconds % 60;
 
                 Owner._chestView._chestTimerText.text = string.Format("{0:00}:{1:00}:{2:00}", hours, minutes, seconds);
+            }
+            
+            private void CalculateRequiredGems()
+            {
+                float gemsNeeded = _chestTimer / 600f;
+                Owner._chestModel._gemsRequiredToUnlock = Mathf.CeilToInt(gemsNeeded);
             }
         }
     }

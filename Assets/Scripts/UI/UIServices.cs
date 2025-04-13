@@ -55,6 +55,7 @@ namespace ChestSystem.UI
         {
             _unlockChestUIController.InitializeImage(chestModel);
             _unlockChestUIController.SetChestController(chestModel._chestController);
+            _unlockChestUIController.ShowUnlockWithGemsButton();
             _unlockChestUIController.gameObject.SetActive(true);
         }
 

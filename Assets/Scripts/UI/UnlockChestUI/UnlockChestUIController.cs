@@ -1,6 +1,7 @@
 using ChestSystem.Chest;
 using ChestSystem.Main;
 using ChestSystem.Event;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -14,6 +15,7 @@ namespace ChestSystem.UI
             [SerializeField] private Button _cancelButton;
             [SerializeField] private Button _unlockButton;
             [SerializeField] private Button _unlockWithGemsButton;
+            [SerializeField] private TextMeshProUGUI _unlockWithgemsText;
             
             private ChestController _chestController;
             private void Start() => SubscribeToEvents();
@@ -34,9 +36,12 @@ namespace ChestSystem.UI
             }
             private void OnUnlockWithGemsButtonClicked()
             {
-                
+               
             }
-
+            public void ShowUnlockWithGemsButton()
+            {
+                _unlockWithgemsText.text = "Use "+ _chestController._chestModel._gemsRequiredToUnlock + " Gems";
+            }
             private void DisableUI()
             {
                 gameObject.SetActive(false);
