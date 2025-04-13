@@ -10,7 +10,11 @@ namespace ChestSystem.Chest
             public ChestController Owner { get; set; }
             private ChestStateMachine stateMachine;
 
-            public OpenedState(ChestStateMachine stateMachine) => this.stateMachine = stateMachine;
+            public OpenedState(ChestStateMachine stateMachine, ChestController controller)
+            {
+                Owner = controller;
+                this.stateMachine = stateMachine;
+            }
 
             public void OnStateEnter()
             {
@@ -25,11 +29,6 @@ namespace ChestSystem.Chest
             public void OnStateExit()
             {
                 
-            }
-
-            private int CalculateRandomCoinsFromChest()
-            {
-                return UnityEngine.Random.Range(Owner._chestModel._chestMaxCoins, Owner._chestModel._chestMinCoins);
             }
         }
     }

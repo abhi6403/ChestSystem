@@ -10,7 +10,11 @@ namespace ChestSystem.Chest
             public ChestController Owner { get; set; }
             private ChestStateMachine stateMachine;
 
-            public LockedState(ChestStateMachine stateMachine) => this.stateMachine = stateMachine;
+            public LockedState(ChestStateMachine stateMachine, ChestController controller)
+            {
+                Owner = controller;
+                this.stateMachine = stateMachine;
+            }
 
             public void OnStateEnter()
             {

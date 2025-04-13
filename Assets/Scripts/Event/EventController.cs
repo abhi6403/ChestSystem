@@ -19,12 +19,4 @@ namespace ChestSystem.Event
         public void AddListener(Action<T> listener) => BaseEvent += listener;
         public void RemoveListener(Action<T> listener) => BaseEvent -= listener;
     }
-
-    /*public class EventController()
-    {
-        public event Action BaseEvent;
-        public void InvokeEvent(ChestController controller) => BaseEvent?.Invoke();
-        public void AddListener(Action listener) => BaseEvent += listener;
-        public void RemoveListener(Action listener) => BaseEvent -= listener;
-    }*/
 }

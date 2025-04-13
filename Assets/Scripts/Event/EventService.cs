@@ -21,14 +21,19 @@ namespace ChestSystem.Event
         }
         
         public EventController OnUnlockButtonClicked { get; private set; }
-        public EventController<ChestModel> OnChestButtonPressedInLockedState { get; private set; }
+        public EventController<ChestModel> OnChestButtonPressed { get; private set; }
         public EventController<ChestController> OnUnlockClicked { get; private set; }
+        
+        public EventController<int> SetCoinsOnChestOpened { get; private set; }
+        public EventController<int> SetGemsOnChestOpened { get; private set; }
 
         public EventService()
         {
             OnUnlockButtonClicked = new EventController();
-            OnChestButtonPressedInLockedState = new EventController<ChestModel>();
+            OnChestButtonPressed = new EventController<ChestModel>();
             OnUnlockClicked = new EventController<ChestController>();
+            SetCoinsOnChestOpened = new EventController<int>();
+            SetGemsOnChestOpened = new EventController<int>();
         }
     }
 }

@@ -23,8 +23,8 @@ namespace ChestSystem.Chest
             public void OnStateEnter()
             {
                 _chestTimer = Owner._chestModel._chestTimer;
-                Owner._chestView._chestStatusText.text = States.UNLOCKING.ToString();
-                Owner._chestModel.SetChestState(States.UNLOCKING);
+                Owner._chestModel.SetChestState(ChestState.UNLOCKING);
+                Owner._chestView._chestStatusText.text = Owner._chestModel._chestState.ToString();
             }
 
             public void Update()
@@ -36,13 +36,13 @@ namespace ChestSystem.Chest
             {
                 if (_chestTimer == 0)
                 {
-                    Owner._chestView._chestStatusText.text = States.UNLOCKED.ToString();
-                    Owner._chestModel.SetChestState(States.UNLOCKED);
+                    Owner._chestModel.SetChestState(ChestState.UNLOCKED);
+                    Owner._chestView._chestStatusText.text = Owner._chestModel._chestState.ToString();
                 }
                 else
                 {
-                    Owner._chestView._chestStatusText.text = States.LOCKED.ToString();
-                    Owner._chestModel.SetChestState(States.LOCKED);
+                    Owner._chestModel.SetChestState(ChestState.LOCKED);
+                    Owner._chestView._chestStatusText.text = Owner._chestModel._chestState.ToString();
                 }
             }
             private void StartTimerToUnlockTheChest()

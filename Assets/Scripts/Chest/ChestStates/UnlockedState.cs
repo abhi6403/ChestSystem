@@ -10,11 +10,17 @@ namespace ChestSystem.Chest
             public ChestController Owner { get; set; }
             private ChestStateMachine stateMachine;
 
-            public UnlockedState(ChestStateMachine stateMachine) => this.stateMachine = stateMachine;
+            public UnlockedState(ChestStateMachine stateMachine, ChestController controller)
+            {
+                Owner = controller;
+                this.stateMachine = stateMachine;
+            }
 
             public void OnStateEnter()
             {
-                
+                Owner._chestView._chestTimerText.gameObject.SetActive(false);
+                Owner._chestModel.SetChestState(ChestState.UNLOCKED);
+                Owner._chestView._chestStatusText.text = Owner._chestModel._chestState.ToString();
             }
 
             public void Update()

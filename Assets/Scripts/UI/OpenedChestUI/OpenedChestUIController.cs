@@ -1,4 +1,5 @@
 using ChestSystem.Chest;
+using ChestSystem.Event;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
@@ -14,7 +15,8 @@ namespace ChestSystem.UI
             [SerializeField] private Button _cancelButton;
             [SerializeField] private TextMeshProUGUI _coinsText;
             [SerializeField] private TextMeshProUGUI _gemsText;
-
+            
+            private ChestController _chestController;
             public void Start() => SubscribeToEvent();
 
             private void SubscribeToEvent()
@@ -22,14 +24,31 @@ namespace ChestSystem.UI
                 _cancelButton.onClick.AddListener(DisableUI);
             }
 
+
+            public void Initialize(ChestModel chestModel)
+            {
+                _openedChestImage.sprite = chestModel._chestOpenSprite;
+                SetCoinsText();
+                SetGemsText();
+            }
+            public void SetChestController(ChestController chestController)
+            {
+                _chestController = chestController;
+            }
+
             private void DisableUI()
             {
                 gameObject.SetActive(false);
             }
 
-            private void SetCoinsAndGemsText(int coins,int gems)
+            private void SetCoinsText()
             {
-                
+                _coinsText.text = _chestController._chestModel._chestCurrentCoins.ToString();
+            }
+
+            private void SetGemsText()
+            {
+                _gemsText.text = _chestController._chestModel._chestCurrentGems.ToString();
             }
         }
     }

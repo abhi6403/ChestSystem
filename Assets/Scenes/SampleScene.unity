@@ -3889,6 +3889,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _unlockChestUIController: {fileID: 1129052003}
   _unlockedChestUIController: {fileID: 1485630001}
+  _openedChestUIController: {fileID: 264270861}
 --- !u!4 &1939456591
 Transform:
   m_ObjectHideFlags: 0

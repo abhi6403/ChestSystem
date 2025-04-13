@@ -19,10 +19,10 @@ namespace ChestSystem.Chest
         {
             states = new Dictionary<ChestState, IState>()
             {
-                { ChestState.LOCKED, new LockedState(this) },
+                { ChestState.LOCKED, new LockedState(this,Owner) },
                 { ChestState.UNLOCKING, new UnlockingState(this, Owner) },
-                { ChestState.UNLOCKED, new UnlockedState(this) },
-                { ChestState.OPENED, new OpenedState(this) }
+                { ChestState.UNLOCKED, new UnlockedState(this,Owner) },
+                { ChestState.OPENED, new OpenedState(this,Owner) }
             };
         }
         

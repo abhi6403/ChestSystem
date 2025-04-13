@@ -1,4 +1,5 @@
 using System;
+using ChestSystem.Event;
 using ChestSystem.StateMachine;
 using TMPro;
 using UnityEngine;
@@ -29,6 +30,11 @@ namespace ChestSystem.Chest
         public void ChestButtonPressedInLockedState()
         {
             _chestController.ChestButtonPressedInLockedState();
+        }
+
+        public void ChestButtonPressedInUnlockedState()
+        {
+            _chestController.ChestButtonPressedInUnlockedState();
         }
     }
 }

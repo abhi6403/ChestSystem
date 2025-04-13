@@ -11,7 +11,7 @@ namespace ChestSystem.Chest
         public Sprite _chestOpenSprite { get; private set; }
         
         public float _chestTimer { get; private set; }
-        public States _chestState { get; private set; }
+        public ChestState _chestState { get; private set; }
         public ChestView _chestPrefab { get; private set; }
         
         public int _chestMaxCoins { get; private set; }
@@ -23,7 +23,7 @@ namespace ChestSystem.Chest
         public int _chestCurrentGems { get; set; }
         public void SetController(ChestController controllerToSet) => _chestController = controllerToSet;
         
-        public void SetChestState(States stateToSet) => _chestState = stateToSet;
+        public void SetChestState(ChestState stateToSet) => _chestState = stateToSet;
         
         public void SetChestTimer(float chestTimerToSet) => _chestTimer = chestTimerToSet;
 
@@ -33,7 +33,7 @@ namespace ChestSystem.Chest
             _chestClosedSprite = chestSO._chestClosedImage;
             _chestOpenSprite = chestSO._chestOpenImage;
             _chestTimer = chestSO._chestTimer;
-            _chestState = States.LOCKED;
+            _chestState = ChestState.LOCKED;
             _chestMaxCoins = chestSO._chestRewards._maxCoins;
             _chestMinCoins = chestSO._chestRewards._minCoins;
             _chestMaxGems = chestSO._chestRewards._maxGems;
