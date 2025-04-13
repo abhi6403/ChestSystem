@@ -22,11 +22,13 @@ namespace ChestSystem.Event
         
         public EventController OnUnlockButtonClicked { get; private set; }
         public EventController<ChestModel> OnChestButtonPressedInLockedState { get; private set; }
+        public EventController<ChestController> OnUnlockClicked { get; private set; }
 
         public EventService()
         {
             OnUnlockButtonClicked = new EventController();
             OnChestButtonPressedInLockedState = new EventController<ChestModel>();
+            OnUnlockClicked = new EventController<ChestController>();
         }
     }
 }

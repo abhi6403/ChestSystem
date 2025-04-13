@@ -1,5 +1,7 @@
 using ChestSystem.StateMachine;
+using Unity.VisualScripting;
 using UnityEngine;
+using IState = ChestSystem.StateMachine.IState;
 
 namespace ChestSystem.Chest
 {
@@ -12,7 +14,11 @@ namespace ChestSystem.Chest
 
             private float _chestTimer;
 
-            public UnlockingState(GenericStateMachine<T> stateMachine) => this.stateMachine = stateMachine;
+            public UnlockingState(GenericStateMachine<T> stateMachine, ChestController controller)
+            {
+                this.stateMachine = stateMachine;
+                Owner = controller;
+            }
 
             public void OnStateEnter()
             {
@@ -39,7 +45,6 @@ namespace ChestSystem.Chest
                     Owner._chestModel.SetChestState(States.LOCKED);
                 }
             }
-
             private void StartTimerToUnlockTheChest()
             {
                 _chestTimer -= Time.deltaTime;

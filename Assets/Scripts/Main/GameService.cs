@@ -8,7 +8,7 @@ using ChestSystem.Utilities;
 
 namespace ChestSystem.Main
 {
-    public class GameService : MonoBehaviour
+    public class GameService : GenericMonoSingleton<GameService>
     {
         public SoundService SoundService { get; private set; }
         public PlayerService PlayerService { get; private set; }

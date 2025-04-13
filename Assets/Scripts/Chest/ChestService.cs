@@ -7,7 +7,7 @@ namespace ChestSystem.Chest
     {
         private List<ChestSO> _chests;
         private Transform _chestsContainer;
-        private ChestController _chestController;
+        public ChestController _chestController{get; private set;}
         
         public void Initialize(List<ChestSO> chests, Transform chestsContainer)
         {

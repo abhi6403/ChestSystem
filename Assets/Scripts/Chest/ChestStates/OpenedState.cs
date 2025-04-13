@@ -26,6 +26,11 @@ namespace ChestSystem.Chest
             {
                 
             }
+
+            private int CalculateRandomCoinsFromChest()
+            {
+                return UnityEngine.Random.Range(Owner._chestModel._chestMaxCoins, Owner._chestModel._chestMinCoins);
+            }
         }
     }
 }

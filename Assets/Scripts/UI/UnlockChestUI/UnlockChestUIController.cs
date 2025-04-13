@@ -43,7 +43,7 @@ namespace ChestSystem.UI
             }
 
             private void OnUnlockButtonClicked()
-            {
+            { 
                 EventService.Instance.OnUnlockButtonClicked.InvokeEvent();
                 DisableUI();
             }

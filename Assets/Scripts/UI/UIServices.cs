@@ -10,9 +10,9 @@ namespace ChestSystem.UI
     public class UIServices : MonoBehaviour
     {
         public ChestService _chestService;
-        
-        [SerializeField] private UnlockChestUIController _unlockChestUIController;
-        [SerializeField] private UnlockedChestUIController _unlockedChestUIController;
+
+        [SerializeField] public UnlockChestUIController _unlockChestUIController;
+        [SerializeField] public UnlockedChestUIController _unlockedChestUIController;
 
         public void Start()
         {
