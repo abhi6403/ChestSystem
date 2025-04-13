@@ -29,6 +29,7 @@ namespace ChestSystem.UI
         public void OnChestButtonClicked(ChestModel chestModel)
         {
             _unlockChestUIController.InitializeImage(chestModel);
+            _unlockChestUIController.SetChestController(chestModel._chestController);
             _unlockChestUIController.gameObject.SetActive(true);
         }
         public void Initialize(ChestService chestService)

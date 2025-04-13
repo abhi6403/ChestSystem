@@ -14,13 +14,19 @@ namespace ChestSystem.UI
             [SerializeField] private Button _cancelButton;
             [SerializeField] private Button _unlockButton;
             [SerializeField] private Button _unlockWithGemsButton;
-
+            
+            private ChestController _chestController;
             private void Start() => SubscribeToEvents();
             private void SubscribeToEvents()
             {
                 _cancelButton.onClick.AddListener(DisableUI);
                 _unlockButton.onClick.AddListener(OnUnlockButtonClicked);
                 _unlockWithGemsButton.onClick.AddListener(OnUnlockWithGemsButtonClicked);
+            }
+
+            public void SetChestController(ChestController chestController)
+            {
+                _chestController = chestController;
             }
             
             public void InitializeImage(ChestModel chestModel)
@@ -44,7 +50,7 @@ namespace ChestSystem.UI
 
             private void OnUnlockButtonClicked()
             { 
-                EventService.Instance.OnUnlockButtonClicked.InvokeEvent();
+                _chestController.UnlockChest();
                 DisableUI();
             }
         }

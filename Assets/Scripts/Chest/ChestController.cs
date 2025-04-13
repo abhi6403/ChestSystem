@@ -1,6 +1,7 @@
 using ChestSystem.StateMachine;
 using ChestSystem.Event;
 using ChestSystem.Main;
+using ChestSystem.UI.ChestStateUI;
 using UnityEngine;
 
 namespace ChestSystem.Chest
@@ -23,13 +24,13 @@ namespace ChestSystem.Chest
             IntializeChestView();
             _chestView.SetController(this);
             CreateChestStateMachine();
-            _chestStateMachine.ChangeState(States.LOCKED);
+            _chestStateMachine.ChangeState(ChestState.LOCKED);
             Events();
         }
 
         private void Events()
         {
-            EventService.Instance.OnUnlockButtonClicked.AddListener(UnlockChest);
+            //EventService.Instance.OnUnlockButtonClicked.AddListener(UnlockChest);
         }
         
         private void IntializeChestView()
@@ -55,7 +56,7 @@ namespace ChestSystem.Chest
 
         public void UnlockChest()
         {
-            _chestStateMachine.ChangeState(States.UNLOCKING);
+            _chestStateMachine.ChangeState(ChestState.UNLOCKING);
         }
     }
 }

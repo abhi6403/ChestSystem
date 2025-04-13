@@ -7,14 +7,14 @@ namespace ChestSystem.Chest
 {
     namespace ChestStates
     {
-        public class UnlockingState<T> : IState where T : ChestController
+        public class UnlockingState : IState 
         {
             public ChestController Owner { get; set; }
-            private GenericStateMachine<T> stateMachine;
+            private ChestStateMachine stateMachine;
 
             private float _chestTimer;
 
-            public UnlockingState(GenericStateMachine<T> stateMachine, ChestController controller)
+            public UnlockingState(ChestStateMachine stateMachine, ChestController controller)
             {
                 this.stateMachine = stateMachine;
                 Owner = controller;

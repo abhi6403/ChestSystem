@@ -1,24 +1,48 @@
+using System.Collections.Generic;
 using ChestSystem.Chest.ChestStates;
 using ChestSystem.StateMachine;
 using UnityEngine;
 
 namespace ChestSystem.Chest
 {
-    public class ChestStateMachine : GenericStateMachine<ChestController>
+    public class ChestStateMachine
     {
-        public ChestStateMachine(ChestController Owner) : base(Owner)
+        private IState currentState;
+        public Dictionary<ChestState, IState> states;
+        private ChestState currentChestState;
+        public ChestStateMachine(ChestController Owner)
         {
-            this.Owner = Owner;
-            CreateStates();
-            SetOwner();
+            CreateStates(Owner);
         }
 
-        private void CreateStates()
+        private void CreateStates(ChestController Owner)
         {
-            States.Add(StateMachine.States.UNLOCKING, new UnlockingState<ChestController>(this,Owner));
-            States.Add(StateMachine.States.LOCKED, new LockedState<ChestController>(this));
-            States.Add(StateMachine.States.UNLOCKED, new UnlockedState<ChestController>(this));
-            States.Add(StateMachine.States.OPENED, new OpenedState<ChestController>(this));
+            states = new Dictionary<ChestState, IState>()
+            {
+                { ChestState.LOCKED, new LockedState(this) },
+                { ChestState.UNLOCKING, new UnlockingState(this, Owner) },
+                { ChestState.UNLOCKED, new UnlockedState(this) },
+                { ChestState.OPENED, new OpenedState(this) }
+            };
         }
+        
+        public void ChangeState(ChestState newState)
+        {
+            if (states.ContainsKey(newState))
+                ChangeState(states[newState]);
+        }
+
+        private void ChangeState(IState newState)
+        {
+            currentState?.OnStateExit();
+            currentState = newState;
+            currentState?.OnStateEnter();
+        }
+
+        public void Update() => currentState?.Update();
+
+        public IState GetCurrentState() => currentState;
+
+        public Dictionary<ChestState, IState> GetStates() => states;
     }
 }

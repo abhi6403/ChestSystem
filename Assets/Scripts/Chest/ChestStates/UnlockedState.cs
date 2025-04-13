@@ -5,12 +5,12 @@ namespace ChestSystem.Chest
 {
     namespace ChestStates
     {
-        public class UnlockedState<T> : IState where T : ChestController
+        public class UnlockedState : IState
         {
             public ChestController Owner { get; set; }
-            private GenericStateMachine<T> stateMachine;
+            private ChestStateMachine stateMachine;
 
-            public UnlockedState(GenericStateMachine<T> stateMachine) => this.stateMachine = stateMachine;
+            public UnlockedState(ChestStateMachine stateMachine) => this.stateMachine = stateMachine;
 
             public void OnStateEnter()
             {

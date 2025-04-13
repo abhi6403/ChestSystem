@@ -6,17 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="f5f1d404-dcd4-4615-940e-4248ac9cf26e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ChestSystem/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ChestSystem/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Chest/ChestController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Chest/ChestController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Chest/ChestModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Chest/ChestModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Chest/ChestService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Chest/ChestService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Chest/ChestStateMachine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Chest/ChestStateMachine.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Chest/ChestStates/LockedState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Chest/ChestStates/LockedState.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Chest/ChestStates/OpenedState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Chest/ChestStates/OpenedState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Chest/ChestStates/UnlockedState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Chest/ChestStates/UnlockedState.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Chest/ChestStates/UnlockingState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Chest/ChestStates/UnlockingState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Event/EventController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Event/EventController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Event/EventService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Event/EventService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Main/GameService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Main/GameService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/UIServices.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/UIServices.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/UnlockChestUI/UnlockChestUIController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/UnlockChestUI/UnlockChestUIController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Bangers SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Bangers SDF.asset" afterDir="false" />
     </list>
@@ -30,6 +25,8 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5a41d6b7189842eca409fd0b1c3e3dcf17bf78/5c/92b8ec18/Action.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/d44b17e136d09081da1e8fd0e8c83fde60e11818b9f2442d7ed8cb733fae895e/System.Collections.Generic.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Chest/ChestState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/OpenedChestUI/OpenedChestUIController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Utilities/GenericMonoSingleton.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -113,7 +110,7 @@
       <workItem from="1744251773321" duration="19629000" />
       <workItem from="1744427766447" duration="8249000" />
       <workItem from="1744450591149" duration="20252000" />
-      <workItem from="1744516395195" duration="2873000" />
+      <workItem from="1744516395195" duration="8830000" />
     </task>
     <servers />
   </component>
