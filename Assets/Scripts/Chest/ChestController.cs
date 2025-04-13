@@ -1,7 +1,4 @@
-using ChestSystem.StateMachine;
 using ChestSystem.Event;
-using ChestSystem.Main;
-using ChestSystem.UI.ChestStateUI;
 using UnityEngine;
 
 namespace ChestSystem.Chest
@@ -14,7 +11,6 @@ namespace ChestSystem.Chest
         private ChestStateMachine _chestStateMachine;
 
         private Transform _chestContainer;
-
         
         public ChestController(ChestSO chestSO,Transform chestTransform)
         {
@@ -23,16 +19,12 @@ namespace ChestSystem.Chest
             _chestModel.SetController(this);
             IntializeChestView();
             _chestView.SetController(this);
+            
             CreateChestStateMachine();
-            _chestStateMachine.ChangeState(ChestState.LOCKED);
             GenerateRandomGems();
             GenerateRandomCoins();
-            Events();
-        }
-
-        private void Events()
-        {
-            //EventService.Instance.OnChestButtonClickedInOpenedState.AddListener(IntializeChestViewOnOpenedState);
+            
+            _chestStateMachine.ChangeState(ChestState.LOCKED);
         }
         
         private void IntializeChestView()
@@ -40,7 +32,6 @@ namespace ChestSystem.Chest
             _chestView = Object.Instantiate(_chestModel._chestPrefab, _chestContainer);
             _chestView._chestClosedSprite.sprite = _chestModel._chestClosedSprite;
             _chestView._chestOpenSprite.sprite = _chestModel._chestOpenSprite;
-            _chestView._chestTimerText.text = _chestModel._chestTimer.ToString();
             _chestView._chestStatusText.text = _chestModel._chestState.ToString();
         }
 
@@ -85,8 +76,6 @@ namespace ChestSystem.Chest
                 _chestStateMachine.ChangeState(ChestState.UNLOCKED);
             }
         }
-
-        
         public void GenerateRandomCoins()
         {
             _chestModel._chestCurrentCoins = UnityEngine.Random.Range(_chestModel._chestMaxCoins, _chestModel._chestMinCoins);

@@ -15,6 +15,10 @@ namespace ChestSystem.UI
         [SerializeField] public UnlockedChestUIController _unlockedChestUIController;
         [SerializeField] public OpenedChestUIController _openedChestUIController;
 
+        public UIServices(ChestService chestService)
+        {
+            _chestService = chestService;
+        }
         public void Start()
         {
             _unlockChestUIController.gameObject.SetActive(false);
@@ -22,7 +26,7 @@ namespace ChestSystem.UI
             _openedChestUIController.gameObject.SetActive(false);
             EventSubscriber();
         }
-
+        
         public void EventSubscriber()
         {
             EventService.Instance.OnChestButtonClickedInLockedState.AddListener(OnChestButtonClickedInLockedState);
@@ -30,6 +34,23 @@ namespace ChestSystem.UI
             EventService.Instance.OnChestButtonClickedInOpenedState.AddListener(OnChestButtonClickedInOpenedState);
         }
 
+        ~UIServices()
+        {
+            EventService.Instance.OnChestButtonClickedInLockedState.RemoveListener(OnChestButtonClickedInLockedState);
+            EventService.Instance.OnChestButtonClickedInUnlockedState.RemoveListener(OnChestButtonClickedInUnlockedState);
+            EventService.Instance.OnChestButtonClickedInOpenedState.RemoveListener(OnChestButtonClickedInOpenedState);
+        }
+        
+        public void Initialize(ChestService chestService)
+        {
+            _chestService = chestService;
+        }
+        
+        public void CreateChest()
+        {
+            _chestService.CreateChest();
+        }
+        
         public void OnChestButtonClickedInLockedState(ChestModel chestModel)
         {
             _unlockChestUIController.InitializeImage(chestModel);
@@ -50,19 +71,5 @@ namespace ChestSystem.UI
             _unlockedChestUIController.InitializeImage(chestModel);
             _unlockedChestUIController.gameObject.SetActive(true);
         }
-        public void Initialize(ChestService chestService)
-        {
-            _chestService = chestService;
-        }
-        public UIServices(ChestService chestService)
-        {
-            _chestService = chestService;
-        }
-        public void CreateChest()
-        {
-            _chestService.CreateChest();
-        }
-
-        
     }
 }

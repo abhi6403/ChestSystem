@@ -21,12 +21,7 @@ namespace ChestSystem.Chest
         
         public int _chestCurrentCoins { get; set; }
         public int _chestCurrentGems { get; set; }
-        public void SetController(ChestController controllerToSet) => _chestController = controllerToSet;
         
-        public void SetChestState(ChestState stateToSet) => _chestState = stateToSet;
-        
-        public void SetChestTimer(float chestTimerToSet) => _chestTimer = chestTimerToSet;
-
         public ChestModel(ChestSO chestSO)
         {
             _chestPrefab = chestSO._chestPrefab;
@@ -42,5 +37,11 @@ namespace ChestSystem.Chest
             _chestCurrentCoins = 0;
             _chestCurrentGems = 0;
         }
+        
+        public void SetController(ChestController controllerToSet) => _chestController = controllerToSet;
+        
+        public void SetChestState(ChestState stateToSet) => _chestState = stateToSet;
+        
+        public void SetChestTimer(float chestTimerToSet) => _chestTimer = chestTimerToSet;
     }
 }

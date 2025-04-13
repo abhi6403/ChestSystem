@@ -37,12 +37,7 @@ namespace ChestSystem.UI
             {
                 gameObject.SetActive(false);
             }
-
-            private void EnableUI()
-            {
-                gameObject.SetActive(true);
-            }
-
+            
             private void OnUndoButtonClicked()
             {
                 _chestController._chestModel.SetChestState(ChestState.LOCKED);

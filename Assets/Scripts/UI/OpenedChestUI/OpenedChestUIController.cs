@@ -23,8 +23,7 @@ namespace ChestSystem.UI
             {
                 _cancelButton.onClick.AddListener(DisableUI);
             }
-
-
+            
             public void Initialize(ChestModel chestModel)
             {
                 _openedChestImage.sprite = chestModel._chestOpenSprite;

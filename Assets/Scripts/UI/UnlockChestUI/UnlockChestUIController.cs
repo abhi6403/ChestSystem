@@ -23,7 +23,6 @@ namespace ChestSystem.UI
                 _unlockButton.onClick.AddListener(OnUnlockButtonClicked);
                 _unlockWithGemsButton.onClick.AddListener(OnUnlockWithGemsButtonClicked);
             }
-
             public void SetChestController(ChestController chestController)
             {
                 _chestController = chestController;
@@ -41,11 +40,6 @@ namespace ChestSystem.UI
             private void DisableUI()
             {
                 gameObject.SetActive(false);
-            }
-
-            public void EnableUI()
-            {
-                gameObject.SetActive(true);
             }
 
             private void OnUnlockButtonClicked()
