@@ -32,7 +32,7 @@ namespace ChestSystem.Chest
 
         private void Events()
         {
-            
+            //EventService.Instance.OnChestButtonClickedInOpenedState.AddListener(IntializeChestViewOnOpenedState);
         }
         
         private void IntializeChestView()
@@ -44,6 +44,14 @@ namespace ChestSystem.Chest
             _chestView._chestStatusText.text = _chestModel._chestState.ToString();
         }
 
+        public void IntializeChestViewOnOpenedState()
+        {
+            _chestView._chestOpenSprite.sprite = _chestModel._chestOpenSprite;
+            _chestView._chestOpenSprite.gameObject.SetActive(true);
+            _chestView._chestTimerText.gameObject.SetActive(false);
+            _chestView._chestClosedSprite.gameObject.SetActive(false);
+            _chestView._chestStatusText.gameObject.SetActive(false);
+        }
         public void Update()
         {
             CheckForTimeLeft();

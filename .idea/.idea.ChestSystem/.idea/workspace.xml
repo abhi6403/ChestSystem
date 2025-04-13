@@ -6,11 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="f5f1d404-dcd4-4615-940e-4248ac9cf26e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ChestSystem/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ChestSystem/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ChestSlot.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/ChestSlot.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Chest/ChestController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Chest/ChestController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Chest/ChestView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Chest/ChestView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Event/EventService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Event/EventService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/UIServices.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/UIServices.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/UnlockedChestUI/UnlockedChestUIController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/UnlockedChestUI/UnlockedChestUIController.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -109,7 +105,7 @@
       <workItem from="1744427766447" duration="8249000" />
       <workItem from="1744450591149" duration="20252000" />
       <workItem from="1744516395195" duration="14650000" />
-      <workItem from="1744541276566" duration="5738000" />
+      <workItem from="1744541276566" duration="6876000" />
     </task>
     <servers />
   </component>

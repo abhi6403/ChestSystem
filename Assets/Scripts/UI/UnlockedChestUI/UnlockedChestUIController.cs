@@ -21,7 +21,7 @@ namespace ChestSystem.UI
             {
                 _cancelButton.onClick.AddListener(DisableUI);
                 _undoButton.onClick.AddListener(OnUndoButtonClicked);
-                _collectButton.onClick.AddListener(DisableUI);
+                _collectButton.onClick.AddListener(OnCollectButtonClicked);
             }
 
             public void SetChestController(ChestController chestController)
@@ -45,7 +45,15 @@ namespace ChestSystem.UI
 
             private void OnUndoButtonClicked()
             {
+                _chestController._chestModel.SetChestState(ChestState.LOCKED);
+            }
+
+            private void OnCollectButtonClicked()
+            {
                 _chestController._chestModel.SetChestState(ChestState.OPENED);
+                _chestController.IntializeChestViewOnOpenedState();
+                _chestController.ChestButtonPressedInOpenState();
+                DisableUI();
             }
         }
     }
