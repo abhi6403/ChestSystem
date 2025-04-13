@@ -54,12 +54,16 @@ namespace ChestSystem.Chest
        
         public void ChestButtonPressedInLockedState()
         {
-            EventService.Instance.OnChestButtonPressed.InvokeEvent(_chestModel);
+            EventService.Instance.OnChestButtonClickedInLockedState.InvokeEvent(_chestModel);
         }
-
         public void ChestButtonPressedInUnlockedState()
         {
-            EventService.Instance.OnChestButtonPressed.InvokeEvent(_chestModel);
+            EventService.Instance.OnChestButtonClickedInUnlockedState.InvokeEvent(_chestModel);
+        }
+
+        public void ChestButtonPressedInOpenState()
+        {
+            EventService.Instance.OnChestButtonClickedInOpenedState.InvokeEvent(_chestModel);
         }
         public void UnlockChest()
         {

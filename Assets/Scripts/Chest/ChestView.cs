@@ -27,14 +27,18 @@ namespace ChestSystem.Chest
             _chestController.Update();
         }
         
-        public void ChestButtonPressedInLockedState()
+        public void ProcessButtonClicked()
         {
-            _chestController.ChestButtonPressedInLockedState();
-        }
-
-        public void ChestButtonPressedInUnlockedState()
-        {
-            _chestController.ChestButtonPressedInUnlockedState();
+            if (_chestController._chestModel._chestState == ChestState.LOCKED)
+            {
+                _chestController.ChestButtonPressedInLockedState();
+            }else if (_chestController._chestModel._chestState == ChestState.UNLOCKED)
+            {
+                _chestController.ChestButtonPressedInUnlockedState();
+            }else if (_chestController._chestModel._chestState == ChestState.OPENED)
+            {
+                _chestController.ChestButtonPressedInOpenState();
+            }
         }
     }
 }

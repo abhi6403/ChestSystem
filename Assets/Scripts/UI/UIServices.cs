@@ -25,22 +25,30 @@ namespace ChestSystem.UI
 
         public void EventSubscriber()
         {
-            EventService.Instance.OnChestButtonPressed.AddListener(OnChestButtonClicked);
-            EventService.Instance.OnChestButtonPressed.AddListener(OnChestButtonClickedInUnlockedState);
+            EventService.Instance.OnChestButtonClickedInLockedState.AddListener(OnChestButtonClickedInLockedState);
+            EventService.Instance.OnChestButtonClickedInUnlockedState.AddListener(OnChestButtonClickedInUnlockedState);
+            EventService.Instance.OnChestButtonClickedInOpenedState.AddListener(OnChestButtonClickedInOpenedState);
         }
 
-        public void OnChestButtonClicked(ChestModel chestModel)
+        public void OnChestButtonClickedInLockedState(ChestModel chestModel)
         {
             _unlockChestUIController.InitializeImage(chestModel);
             _unlockChestUIController.SetChestController(chestModel._chestController);
             _unlockChestUIController.gameObject.SetActive(true);
         }
 
-        public void OnChestButtonClickedInUnlockedState(ChestModel chestModel)
+        public void OnChestButtonClickedInOpenedState(ChestModel chestModel)
         {
             _openedChestUIController.SetChestController(chestModel._chestController);
             _openedChestUIController.Initialize(chestModel);
             _openedChestUIController.gameObject.SetActive(true);
+        }
+
+        public void OnChestButtonClickedInUnlockedState(ChestModel chestModel)
+        {
+            _unlockedChestUIController.SetChestController(chestModel._chestController);
+            _unlockedChestUIController.InitializeImage(chestModel);
+            _unlockedChestUIController.gameObject.SetActive(true);
         }
         public void Initialize(ChestService chestService)
         {
