@@ -1,3 +1,4 @@
+using ChestSystem.Event;
 using ChestSystem.StateMachine;
 using UnityEngine;
 
@@ -18,7 +19,8 @@ namespace ChestSystem.Chest
 
             public void OnStateEnter()
             {
-                
+                AddGemsToPlayer();
+                AddCoinsToPlayer();
             }
 
             public void Update()
@@ -29,6 +31,18 @@ namespace ChestSystem.Chest
             public void OnStateExit()
             {
                 
+            }
+
+            private void AddGemsToPlayer()
+            {
+                int temp = Owner._chestModel._chestCurrentGems;
+                EventService.Instance.OnGemsCollected.InvokeEvent(temp);
+            }
+
+            private void AddCoinsToPlayer()
+            {
+                int temp = Owner._chestModel._chestCurrentCoins;
+                EventService.Instance.OnCoinsCollected.InvokeEvent(temp);
             }
         }
     }

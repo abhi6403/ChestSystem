@@ -66,15 +66,20 @@ namespace ChestSystem.Chest
         }
         public void UnlockChest()
         {
-            _chestStateMachine.ChangeState(ChestState.UNLOCKING);
+            SetStateMachineState(ChestState.UNLOCKING);
         }
 
         private void CheckForTimeLeft()
         {
             if (_chestModel._chestTimer <= 0 && _chestModel._chestState == ChestState.UNLOCKING)
             {
-                _chestStateMachine.ChangeState(ChestState.UNLOCKED);
+                SetStateMachineState(ChestState.UNLOCKED);
             }
+        }
+
+        public void SetStateMachineState(ChestState state)
+        {
+            _chestStateMachine.ChangeState(state);
         }
         public void GenerateRandomCoins()
         {

@@ -41,11 +41,13 @@ namespace ChestSystem.UI
             private void OnUndoButtonClicked()
             {
                 _chestController._chestModel.SetChestState(ChestState.LOCKED);
+                _chestController.SetStateMachineState(ChestState.LOCKED);
             }
 
             private void OnCollectButtonClicked()
             {
                 _chestController._chestModel.SetChestState(ChestState.OPENED);
+                _chestController.SetStateMachineState(ChestState.OPENED);
                 _chestController.IntializeChestViewOnOpenedState();
                 _chestController.ChestButtonPressedInOpenState();
                 DisableUI();
