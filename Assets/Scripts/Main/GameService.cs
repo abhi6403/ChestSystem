@@ -20,6 +20,7 @@ namespace ChestSystem.Main
 
         [SerializeField] private List<ChestSO> chests;
         [SerializeField] private Transform _chestContainer;
+        [SerializeField] private PlayerView _playerView;
         protected void Awake()
         {
             CreateService();
@@ -29,7 +30,7 @@ namespace ChestSystem.Main
         private void CreateService()
         {
             SoundService = new SoundService();
-            PlayerService = new PlayerService();
+            PlayerService = new PlayerService(_playerView);
             ChestService = new ChestService();
         }
 

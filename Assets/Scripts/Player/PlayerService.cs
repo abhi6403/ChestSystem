@@ -6,9 +6,9 @@ namespace ChestSystem.Player
     {
         public PlayerController _playerController;
 
-        public PlayerService()
+        public PlayerService(PlayerView playerView)
         {
-            _playerController = new PlayerController();
+            _playerController = new PlayerController(playerView);
         }
     }
 }

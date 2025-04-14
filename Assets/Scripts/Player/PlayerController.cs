@@ -5,32 +5,33 @@ using UnityEngine;
 
 namespace ChestSystem.Player
 {
-    public class PlayerController : MonoBehaviour
+    public class PlayerController
     {
-        [SerializeField] private TextMeshProUGUI _gemsText;
-        [SerializeField] private TextMeshProUGUI _coinText;
-        
-        private int _gems;
-        private int _coins;
+        public PlayerModel _playerModel { get; private set; }
+        public PlayerView _playerView { get; private set; }
+
+        public PlayerController(PlayerView playerView)
+        {
+            _playerModel = new PlayerModel();
+            _playerView = playerView;
+            
+            _playerModel.SetPlayerController(this);
+            _playerView.SetPlayerController(this);
+        }
 
         public void Start()
         {
-            _gems = 0;
-            _coins = 0;
+            _playerModel._coins = 0;
+            _playerModel._gems = 0;
             
             InitializeText();
             Events();
         }
 
-        public PlayerController()
-        {
-            
-        }
-
         private void InitializeText()
         {
-            _gemsText.text = _gems.ToString();
-            _coinText.text = _coins.ToString();
+            _playerView._gemsText.text = _playerModel._gems.ToString();
+            _playerView._coinText.text = _playerModel._coins.ToString();
         }
         private void Events()
         {
@@ -42,25 +43,24 @@ namespace ChestSystem.Player
 
         private void OnGemsUsed(int gems)
         {
-            _gems -= gems;
+            _playerModel._gems -= gems;
         }
 
         private void OnCoinsUsed(int coins)
         {
-            _coins -= coins;
+            _playerModel._coins -= coins;
         }
 
         private void OnGemsCollected(int gems)
         {
-            Debug.Log("Getting gems");
-            _gems += gems;
-            _gemsText.text = _gems.ToString();
+            _playerModel._gems += gems;
+            _playerView._gemsText.text = _playerModel._gems.ToString();
         }
 
         private void OnCoinsCollected(int coins)
         {
-            _coins += coins;
-            _coinText.text = _coins.ToString();
+            _playerModel._coins += coins;
+            _playerView._coinText.text = _playerModel._coins.ToString();
         }
     }
 }
