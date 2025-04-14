@@ -25,8 +25,8 @@ namespace ChestSystem.Chest
         public void Update()
         {
             _chestController.Update();
+            SetChestStatusText();
         }
-        
         public void ProcessButtonClicked()
         {
             if (_chestController._chestModel._chestState == ChestState.LOCKED || _chestController._chestModel._chestState == ChestState.UNLOCKING)
@@ -39,6 +39,11 @@ namespace ChestSystem.Chest
             {
                 _chestController.ChestButtonPressedInOpenState();
             }
+        }
+
+        public void SetChestStatusText()
+        {
+            _chestStatusText.text = _chestController._chestModel._chestState.ToString();
         }
     }
 }

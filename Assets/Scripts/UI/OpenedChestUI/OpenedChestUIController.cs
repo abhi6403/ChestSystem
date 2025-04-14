@@ -34,7 +34,7 @@ namespace ChestSystem.UI
             {
                 _chestController = chestController;
             }
-
+            
             private void DisableUI()
             {
                 gameObject.SetActive(false);

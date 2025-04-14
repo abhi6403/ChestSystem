@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using ChestSystem.Chest;
+using ChestSystem.Event;
 using ChestSystem.Player;
 using UnityEngine;
 
@@ -13,6 +14,13 @@ namespace ChestSystem.Commands
         public CommandInvoker(PlayerService playerService)
         {
             _playerService = playerService;
+            Events();
+        }
+
+        private void Events()
+        {
+            EventService.Instance.UnlockChest.AddListener(ProcessCommand);
+            EventService.Instance.UndoButtonClicked.AddListener(Undo);
         }
 
         public void ProcessCommand(ChestController chestController, ICommand command)

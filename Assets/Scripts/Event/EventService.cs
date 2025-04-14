@@ -1,4 +1,5 @@
 using ChestSystem.Chest;
+using ChestSystem.Commands;
 using UnityEngine;
 
 namespace ChestSystem.Event
@@ -26,10 +27,12 @@ namespace ChestSystem.Event
         public EventController<ChestModel> OnChestButtonClickedInUnlockedState { get; private set; }
         public EventController<ChestModel> OnChestButtonClickedInOpenedState { get; private set; }
         public EventController<ChestController> OnUnlockClicked { get; private set; }
+        public EventController<ChestController> UndoButtonClicked { get; private set; }
         public EventController<int> OnGemsUsed { get; private set; }
         public EventController<int> OnGemsCollected { get; private set; }
         public EventController<int> OnCoinsUsed { get; private set; }
         public EventController<int> OnCoinsCollected { get; private set; }
+        public EventController<ChestController, ICommand> UnlockChest { get; private set; }
 
 
         public EventService()
@@ -44,6 +47,8 @@ namespace ChestSystem.Event
             OnCoinsUsed = new EventController<int>();
             OnCoinsCollected = new EventController<int>();
             OnGemsCollected = new EventController<int>();
+            UnlockChest = new EventController<ChestController,ICommand>();
+            UndoButtonClicked = new EventController<ChestController>();
         }
     }
 }

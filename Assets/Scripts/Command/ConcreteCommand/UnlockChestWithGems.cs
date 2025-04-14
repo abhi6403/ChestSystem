@@ -23,7 +23,7 @@ namespace ChestSystem.Commands
             {
                 int _gemsLeft = _gemsCount - _gemsRequiredToUnlock;
                 _chestController._chestModel.SetChestState(ChestState.UNLOCKED);
-                _playerController._playerModel._gems = _gemsLeft;
+                _playerController.UpdateGems(_gemsLeft);
                 _chestController.SetStateMachineState(ChestState.UNLOCKED);
             }
             else
@@ -34,7 +34,7 @@ namespace ChestSystem.Commands
 
         public void Undo()
         {
-            _playerController._playerModel._gems = _gemsCount;
+            _playerController.UpdateGems(_gemsCount);
             _chestController._chestModel.SetChestState(ChestState.LOCKED);
             _chestController.SetStateMachineState(ChestState.LOCKED);
         }

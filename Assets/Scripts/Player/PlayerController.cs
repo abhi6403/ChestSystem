@@ -51,6 +51,11 @@ namespace ChestSystem.Player
             _playerModel._coins -= coins;
         }
 
+        public void UpdateGems(int gems)
+        {
+            _playerModel._gems = gems;
+            _playerView._gemsText.text = _playerModel._gems.ToString();
+        }
         private void OnGemsCollected(int gems)
         {
             _playerModel._gems += gems;

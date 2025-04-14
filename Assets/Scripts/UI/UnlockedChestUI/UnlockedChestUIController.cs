@@ -20,8 +20,8 @@ namespace ChestSystem.UI
             private void SubscribeToEvents()
             {
                 _cancelButton.onClick.AddListener(DisableUI);
-                _undoButton.onClick.AddListener(OnUndoButtonClicked);
                 _collectButton.onClick.AddListener(OnCollectButtonClicked);
+                _undoButton.onClick.AddListener(OnUndoButtonClicked);
             }
 
             public void SetChestController(ChestController chestController)
@@ -29,6 +29,10 @@ namespace ChestSystem.UI
                 _chestController = chestController;
             }
             
+            private void OnUndoButtonClicked()
+            {
+                _chestController.UndoUnlockWithGems();
+            }
             public void InitializeImage(ChestModel chestModel)
             {
                 _chestImage.sprite = chestModel._chestClosedSprite;
@@ -36,11 +40,6 @@ namespace ChestSystem.UI
             private void DisableUI()
             {
                 gameObject.SetActive(false);
-            }
-            
-            private void OnUndoButtonClicked()
-            {
-                _chestController.UndoUnlockWithGems();
             }
 
             private void OnCollectButtonClicked()

@@ -19,7 +19,8 @@ namespace ChestSystem.Chest
 
             public void OnStateEnter()
             {
-                _chestTimer = Owner._chestModel._chestTimer;
+                Owner._chestView._chestTimerText.gameObject.SetActive(true);
+                _chestTimer = Owner._chestModel._constChestTimer;
                 SetTimerText();
             }
 

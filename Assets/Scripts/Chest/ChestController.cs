@@ -11,6 +11,7 @@ namespace ChestSystem.Chest
         public ChestModel _chestModel { get; set; }
         
         private ChestStateMachine _chestStateMachine;
+        private ICommand unlockChest;
 
         private Transform _chestContainer;
         
@@ -27,6 +28,7 @@ namespace ChestSystem.Chest
             GenerateRandomCoins();
             
             _chestStateMachine.ChangeState(ChestState.LOCKED);
+            unlockChest = new UnlockChestWithGems();
         }
         
         private void IntializeChestView()
@@ -76,16 +78,16 @@ namespace ChestSystem.Chest
             if (_chestModel._chestTimer <= 0 && _chestModel._chestState == ChestState.UNLOCKING)
             {
                 SetStateMachineState(ChestState.UNLOCKED);
+                EventService.Instance.UnlockChest.InvokeEvent(this,unlockChest);
             }
         }
 
         public void UnlockWithGems()
         {
-            ICommand unlockWithGemsCommand = new UnlockChestWithGems();
-            GameService.Instance.CommandInvoker.ProcessCommand(this, unlockWithGemsCommand);
+            EventService.Instance.UnlockChest.InvokeEvent(this, unlockChest);
         }
 
-        public void UndoUnlockWithGems() => GameService.Instance.CommandInvoker.Undo(this);
+        public void UndoUnlockWithGems() => EventService.Instance.UndoButtonClicked.InvokeEvent(this);
         public void SetStateMachineState(ChestState state)
         {
             _chestStateMachine.ChangeState(state);
