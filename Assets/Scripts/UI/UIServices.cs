@@ -48,6 +48,7 @@ namespace ChestSystem.UI
         
         public void CreateChest()
         {
+            SoundManager.Instance.Play(Sounds.BUTTONCLICK);
             _chestService.CreateChest();
         }
         

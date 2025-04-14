@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using ChestSystem.Event;
 using ChestSystem.StateMachine;
 using TMPro;
@@ -26,9 +27,14 @@ namespace ChestSystem.Chest
         {
             _chestController.Update();
             SetChestStatusText();
+            if (_chestController._chestModel._chestState == ChestState.OPENED)
+            {
+                StartCoroutine(DestroyChest());
+            }
         }
         public void ProcessButtonClicked()
         {
+            SoundManager.Instance.Play(Sounds.BUTTONCLICK);
             if (_chestController._chestModel._chestState == ChestState.LOCKED || _chestController._chestModel._chestState == ChestState.UNLOCKING)
             {
                 _chestController.ChestButtonPressedInLockedState();
@@ -44,6 +50,12 @@ namespace ChestSystem.Chest
         public void SetChestStatusText()
         {
             _chestStatusText.text = _chestController._chestModel._chestState.ToString();
+        }
+
+        private IEnumerator DestroyChest()
+        {
+            yield return new WaitForSeconds(5);
+            Destroy(gameObject);
         }
     }
 }

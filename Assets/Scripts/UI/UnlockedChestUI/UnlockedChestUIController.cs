@@ -31,6 +31,7 @@ namespace ChestSystem.UI
             
             private void OnUndoButtonClicked()
             {
+                SoundManager.Instance.Play(Sounds.BUTTONCLICK);
                 _chestController.UndoUnlockWithGems();
             }
             public void InitializeImage(ChestModel chestModel)
@@ -39,11 +40,13 @@ namespace ChestSystem.UI
             }
             private void DisableUI()
             {
+                SoundManager.Instance.Play(Sounds.BUTTONCLICK);
                 gameObject.SetActive(false);
             }
 
             private void OnCollectButtonClicked()
             {
+                SoundManager.Instance.Play(Sounds.BUTTONCLICK);
                 _chestController._chestModel.SetChestState(ChestState.OPENED);
                 _chestController.SetStateMachineState(ChestState.OPENED);
                 _chestController.IntializeChestViewOnOpenedState();

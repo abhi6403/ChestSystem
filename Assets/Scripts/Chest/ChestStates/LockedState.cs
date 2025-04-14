@@ -19,6 +19,7 @@ namespace ChestSystem.Chest
 
             public void OnStateEnter()
             {
+                SoundManager.Instance.Play(Sounds.LOCKED);
                 Owner._chestView._chestTimerText.gameObject.SetActive(true);
                 _chestTimer = Owner._chestModel._constChestTimer;
                 SetTimerText();

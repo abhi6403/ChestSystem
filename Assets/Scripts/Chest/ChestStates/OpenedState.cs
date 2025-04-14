@@ -1,6 +1,8 @@
+using System.Collections;
 using ChestSystem.Event;
-using ChestSystem.StateMachine;
+using Unity.VisualScripting;
 using UnityEngine;
+using IState = ChestSystem.StateMachine.IState;
 
 namespace ChestSystem.Chest
 {
@@ -19,8 +21,10 @@ namespace ChestSystem.Chest
 
             public void OnStateEnter()
             {
+                SoundManager.Instance.Play(Sounds.COLLECTED);
                 AddGemsToPlayer();
                 AddCoinsToPlayer();
+                
             }
 
             public void Update()

@@ -37,6 +37,7 @@ namespace ChestSystem.UI
             
             private void DisableUI()
             {
+                SoundManager.Instance.Play(Sounds.BUTTONCLICK);
                 gameObject.SetActive(false);
             }
 
