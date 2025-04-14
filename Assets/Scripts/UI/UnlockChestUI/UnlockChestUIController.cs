@@ -36,7 +36,7 @@ namespace ChestSystem.UI
             }
             private void OnUnlockWithGemsButtonClicked()
             {
-               
+               _chestController.UnlockWithGems();
             }
             public void ShowUnlockWithGemsButton()
             {

@@ -21,6 +21,7 @@ namespace ChestSystem.Event
         }
         
         public EventController OnUnlockButtonClicked { get; private set; }
+        public EventController UnableToUnlockChest { get; private set; }
         public EventController<ChestModel> OnChestButtonClickedInLockedState { get; private set; }
         public EventController<ChestModel> OnChestButtonClickedInUnlockedState { get; private set; }
         public EventController<ChestModel> OnChestButtonClickedInOpenedState { get; private set; }
@@ -34,6 +35,7 @@ namespace ChestSystem.Event
         public EventService()
         {
             OnUnlockButtonClicked = new EventController();
+            UnableToUnlockChest = new EventController();
             OnChestButtonClickedInLockedState = new EventController<ChestModel>();
             OnChestButtonClickedInUnlockedState = new EventController<ChestModel>();
             OnChestButtonClickedInOpenedState = new EventController<ChestModel>();

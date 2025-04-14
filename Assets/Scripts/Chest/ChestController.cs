@@ -1,4 +1,6 @@
+using ChestSystem.Commands;
 using ChestSystem.Event;
+using ChestSystem.Main;
 using UnityEngine;
 
 namespace ChestSystem.Chest
@@ -77,6 +79,13 @@ namespace ChestSystem.Chest
             }
         }
 
+        public void UnlockWithGems()
+        {
+            ICommand unlockWithGemsCommand = new UnlockChestWithGems();
+            GameService.Instance.CommandInvoker.ProcessCommand(this, unlockWithGemsCommand);
+        }
+
+        public void UndoUnlockWithGems() => GameService.Instance.CommandInvoker.Undo(this);
         public void SetStateMachineState(ChestState state)
         {
             _chestStateMachine.ChangeState(state);

@@ -40,8 +40,7 @@ namespace ChestSystem.UI
             
             private void OnUndoButtonClicked()
             {
-                _chestController._chestModel.SetChestState(ChestState.LOCKED);
-                _chestController.SetStateMachineState(ChestState.LOCKED);
+                _chestController.UndoUnlockWithGems();
             }
 
             private void OnCollectButtonClicked()

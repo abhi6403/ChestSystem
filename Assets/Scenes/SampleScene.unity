@@ -3400,6 +3400,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 57a9c0409c0b1b64d95b6edab66248c4, type: 2}
   - {fileID: 11400000, guid: 6bf7047aa4f83ab40a4b1ca77b5f09e8, type: 2}
   _chestContainer: {fileID: 1103528640}
+  _playerView: {fileID: 1918332082}
 --- !u!4 &1833971655
 Transform:
   m_ObjectHideFlags: 0
@@ -3832,7 +3833,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1918332081}
-  - component: {fileID: 1918332080}
+  - component: {fileID: 1918332082}
   m_Layer: 0
   m_Name: PlayerController
   m_TagString: Untagged
@@ -3840,20 +3841,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1918332080
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1918332079}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dfbd664b0a13f624cbaa990a77ecf5db, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _gemsText: {fileID: 1178283986}
-  _coinText: {fileID: 1838675095}
 --- !u!4 &1918332081
 Transform:
   m_ObjectHideFlags: 0
@@ -3869,6 +3856,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1918332082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1918332079}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 695d8c6fab7352d41b1413623cb06da0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _gemsText: {fileID: 1178283986}
+  _coinText: {fileID: 1838675095}
 --- !u!1 &1930023965
 GameObject:
   m_ObjectHideFlags: 0
