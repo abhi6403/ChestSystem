@@ -1,7 +1,4 @@
-using System;
 using ChestSystem.Event;
-using TMPro;
-using UnityEngine;
 
 namespace ChestSystem.Player
 {
@@ -39,6 +36,14 @@ namespace ChestSystem.Player
             EventService.Instance.OnCoinsUsed.AddListener(OnCoinsUsed);
             EventService.Instance.OnGemsCollected.AddListener(OnGemsCollected);
             EventService.Instance.OnCoinsCollected.AddListener(OnCoinsCollected);
+        }
+
+        ~PlayerController()
+        {
+            EventService.Instance.OnGemsUsed.RemoveListener(OnGemsUsed);
+            EventService.Instance.OnCoinsUsed.RemoveListener(OnCoinsUsed);
+            EventService.Instance.OnGemsCollected.RemoveListener(OnGemsCollected);
+            EventService.Instance.OnCoinsCollected.RemoveListener(OnCoinsCollected);
         }
 
         private void OnGemsUsed(int gems)

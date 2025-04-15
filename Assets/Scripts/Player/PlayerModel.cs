@@ -1,5 +1,3 @@
-using UnityEngine;
-
 namespace ChestSystem.Player
 {
     public class PlayerModel
