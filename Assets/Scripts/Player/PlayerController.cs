@@ -18,8 +18,8 @@ namespace ChestSystem.Player
 
         public void Start()
         {
-            _playerModel._coins = 0;
-            _playerModel._gems = 0;
+            _playerModel._coins = 100;
+            _playerModel._gems = 10;
             
             InitializeText();
             Events();
