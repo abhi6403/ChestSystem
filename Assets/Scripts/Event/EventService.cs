@@ -6,36 +6,40 @@ namespace ChestSystem.Event
 {
     public class EventService
     {
-        private static EventService instance;
+        private static EventService _instance;
 
         public static EventService Instance
         {
             get
             {
-                if (instance == null)
+                if (_instance == null)
                 {
-                    instance = new EventService();
+                    _instance = new EventService();
                 }
 
-                return instance;
+                return _instance;
             }
         }
         
         public EventController OnUnlockButtonClicked { get; private set; }
         public EventController UnableToUnlockChest { get; private set; }
+        
         public EventController<ChestModel> OnChestButtonClickedInLockedState { get; private set; }
         public EventController<ChestModel> OnChestButtonClickedInUnlockedState { get; private set; }
         public EventController<ChestModel> OnChestButtonClickedInOpenedState { get; private set; }
+        
         public EventController<ChestController> OnUnlockClicked { get; private set; }
         public EventController<ChestController> UndoButtonClicked { get; private set; }
+        
         public EventController<int> OnGemsUsed { get; private set; }
         public EventController<int> OnGemsCollected { get; private set; }
         public EventController<int> OnCoinsUsed { get; private set; }
         public EventController<int> OnCoinsCollected { get; private set; }
+        
         public EventController<ChestController, ICommand> UnlockChest { get; private set; }
 
 
-        public EventService()
+        private EventService()
         {
             OnUnlockButtonClicked = new EventController();
             UnableToUnlockChest = new EventController();

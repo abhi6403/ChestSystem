@@ -22,6 +22,12 @@ namespace ChestSystem.Commands
             EventService.Instance.UndoButtonClicked.AddListener(Undo);
         }
 
+        ~CommandInvoker()
+        {
+            EventService.Instance.UnlockChest.RemoveListener(ProcessCommand);
+            EventService.Instance.UndoButtonClicked.RemoveListener(Undo);
+        }
+
         private void ProcessCommand(ChestController chestController, ICommand command)
         {
             ExecuteCommand(chestController, command);

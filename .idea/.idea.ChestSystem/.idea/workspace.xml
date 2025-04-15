@@ -6,17 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="f5f1d404-dcd4-4615-940e-4248ac9cf26e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ChestSystem/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ChestSystem/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Chest/ChestController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Chest/ChestController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Chest/ChestModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Chest/ChestModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Chest/ChestService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Chest/ChestService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Chest/ChestState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Chest/ChestState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Chest/ChestStateMachine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Chest/ChestStateMachine.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Chest/ChestStates/LockedState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Chest/ChestStates/LockedState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Chest/ChestStates/OpenedState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Chest/ChestStates/OpenedState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Chest/ChestStates/UnlockedState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Chest/ChestStates/UnlockedState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Chest/ChestStates/UnlockingState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Chest/ChestStates/UnlockingState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Chest/ChestView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Chest/ChestView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Bangers SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Bangers SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Event/EventController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Event/EventController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Event/EventService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Event/EventService.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -118,7 +109,7 @@
       <workItem from="1744516395195" duration="14650000" />
       <workItem from="1744541276566" duration="9824000" />
       <workItem from="1744607748386" duration="7713000" />
-      <workItem from="1744682591604" duration="1244000" />
+      <workItem from="1744682591604" duration="1929000" />
     </task>
     <servers />
   </component>
