@@ -1,14 +1,13 @@
 using System.Collections.Generic;
 using ChestSystem.Chest.ChestStates;
 using ChestSystem.StateMachine;
-using UnityEngine;
 
 namespace ChestSystem.Chest
 {
     public class ChestStateMachine
     {
         private IState currentState;
-        public Dictionary<ChestState, IState> states;
+        private Dictionary<ChestState, IState> states;
         private ChestState currentChestState;
         public ChestStateMachine(ChestController Owner)
         {
@@ -40,9 +39,5 @@ namespace ChestSystem.Chest
         }
 
         public void Update() => currentState?.Update();
-
-        public IState GetCurrentState() => currentState;
-
-        public Dictionary<ChestState, IState> GetStates() => states;
     }
 }

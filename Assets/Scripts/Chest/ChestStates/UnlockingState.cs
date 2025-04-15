@@ -1,5 +1,3 @@
-using ChestSystem.StateMachine;
-using Unity.VisualScripting;
 using UnityEngine;
 using IState = ChestSystem.StateMachine.IState;
 
@@ -56,7 +54,7 @@ namespace ChestSystem.Chest
                 int minutes = (totalSeconds % 3600) / 60;
                 int seconds = totalSeconds % 60;
 
-                Owner._chestView._chestTimerText.text = string.Format("{0:00}:{1:00}:{2:00}", hours, minutes, seconds);
+                Owner._chestView._chestTimerText.text = $"{hours:00}:{minutes:00}:{seconds:00}";
             }
 
             private void CalculateRequiredGems()

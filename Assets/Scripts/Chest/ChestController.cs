@@ -1,6 +1,5 @@
 using ChestSystem.Commands;
 using ChestSystem.Event;
-using ChestSystem.Main;
 using UnityEngine;
 
 namespace ChestSystem.Chest
@@ -11,7 +10,7 @@ namespace ChestSystem.Chest
         public ChestModel _chestModel { get; set; }
         
         private ChestStateMachine _chestStateMachine;
-        private ICommand unlockChest;
+        private ICommand _unlockChest;
 
         private Transform _chestContainer;
         
@@ -28,7 +27,7 @@ namespace ChestSystem.Chest
             GenerateRandomCoins();
             
             _chestStateMachine.ChangeState(ChestState.LOCKED);
-            unlockChest = new UnlockChestWithGems();
+            _unlockChest = new UnlockChestWithGems();
         }
         
         private void IntializeChestView()
@@ -78,13 +77,13 @@ namespace ChestSystem.Chest
             if (_chestModel._chestTimer <= 0 && _chestModel._chestState == ChestState.UNLOCKING)
             {
                 SetStateMachineState(ChestState.UNLOCKED);
-                EventService.Instance.UnlockChest.InvokeEvent(this,unlockChest);
+                EventService.Instance.UnlockChest.InvokeEvent(this,_unlockChest);
             }
         }
 
         public void UnlockWithGems()
         {
-            EventService.Instance.UnlockChest.InvokeEvent(this, unlockChest);
+            EventService.Instance.UnlockChest.InvokeEvent(this, _unlockChest);
         }
 
         public void UndoUnlockWithGems() => EventService.Instance.UndoButtonClicked.InvokeEvent(this);
@@ -92,14 +91,14 @@ namespace ChestSystem.Chest
         {
             _chestStateMachine.ChangeState(state);
         }
-        public void GenerateRandomCoins()
+        private void GenerateRandomCoins()
         {
-            _chestModel._chestCurrentCoins = UnityEngine.Random.Range(_chestModel._chestMaxCoins, _chestModel._chestMinCoins);
+            _chestModel._chestCurrentCoins = Random.Range(_chestModel._chestMaxCoins, _chestModel._chestMinCoins);
         }
 
-        public void GenerateRandomGems()
+        private void GenerateRandomGems()
         {
-            _chestModel._chestCurrentGems = UnityEngine.Random.Range(_chestModel._chestMaxGems, _chestModel._chestMinGems);
+            _chestModel._chestCurrentGems = Random.Range(_chestModel._chestMaxGems, _chestModel._chestMinGems);
         }
     }
 }

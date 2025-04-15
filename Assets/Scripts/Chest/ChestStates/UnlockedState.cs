@@ -1,5 +1,4 @@
 using ChestSystem.StateMachine;
-using UnityEngine;
 
 namespace ChestSystem.Chest
 {
@@ -24,15 +23,9 @@ namespace ChestSystem.Chest
                 Owner._chestView._chestStatusText.text = Owner._chestModel._chestState.ToString();
             }
 
-            public void Update()
-            {
-                
-            }
+            public void Update() {}
 
-            public void OnStateExit()
-            {
-                
-            }
+            public void OnStateExit() {}
         }
     }
 }

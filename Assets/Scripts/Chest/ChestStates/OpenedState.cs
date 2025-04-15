@@ -1,7 +1,4 @@
-using System.Collections;
 using ChestSystem.Event;
-using Unity.VisualScripting;
-using UnityEngine;
 using IState = ChestSystem.StateMachine.IState;
 
 namespace ChestSystem.Chest
@@ -24,19 +21,11 @@ namespace ChestSystem.Chest
                 SoundManager.Instance.Play(Sounds.COLLECTED);
                 AddGemsToPlayer();
                 AddCoinsToPlayer();
-                
             }
 
-            public void Update()
-            {
-                
-            }
-
-            public void OnStateExit()
-            {
-                
-            }
-
+            public void Update() {}
+            public void OnStateExit() {}
+            
             private void AddGemsToPlayer()
             {
                 int temp = Owner._chestModel._chestCurrentGems;

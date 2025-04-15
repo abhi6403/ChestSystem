@@ -1,7 +1,4 @@
-using System;
 using System.Collections;
-using ChestSystem.Event;
-using ChestSystem.StateMachine;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -10,9 +7,8 @@ namespace ChestSystem.Chest
 {
     public class ChestView : MonoBehaviour
     {
-        public ChestController _chestController { get; private set; }
+        private ChestController _chestController;
         
-
         public Image _chestClosedSprite;
         public Image _chestOpenSprite;
         public TextMeshProUGUI _chestTimerText;
@@ -21,7 +17,6 @@ namespace ChestSystem.Chest
         public Button _chestButton;
         
         public void SetController(ChestController controllerToSet) => _chestController = controllerToSet;
-
         
         public void Update()
         {
@@ -32,6 +27,7 @@ namespace ChestSystem.Chest
                 StartCoroutine(DestroyChest());
             }
         }
+        
         public void ProcessButtonClicked()
         {
             SoundManager.Instance.Play(Sounds.BUTTONCLICK);
@@ -47,7 +43,7 @@ namespace ChestSystem.Chest
             }
         }
 
-        public void SetChestStatusText()
+        private void SetChestStatusText()
         {
             _chestStatusText.text = _chestController._chestModel._chestState.ToString();
         }
