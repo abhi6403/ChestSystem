@@ -1,5 +1,4 @@
 using ChestSystem.Chest;
-using ChestSystem.Main;
 using ChestSystem.Event;
 using TMPro;
 using UnityEngine;

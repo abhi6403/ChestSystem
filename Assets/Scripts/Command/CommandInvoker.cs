@@ -2,7 +2,6 @@ using System.Collections.Generic;
 using ChestSystem.Chest;
 using ChestSystem.Event;
 using ChestSystem.Player;
-using UnityEngine;
 
 namespace ChestSystem.Commands
 {
@@ -23,7 +22,7 @@ namespace ChestSystem.Commands
             EventService.Instance.UndoButtonClicked.AddListener(Undo);
         }
 
-        public void ProcessCommand(ChestController chestController, ICommand command)
+        private void ProcessCommand(ChestController chestController, ICommand command)
         {
             ExecuteCommand(chestController, command);
             RegisterCommand(chestController, command);
@@ -41,7 +40,7 @@ namespace ChestSystem.Commands
             _commandsHistory[chestController].Push(command);
         }
 
-        public void Undo(ChestController chestController)
+        private void Undo(ChestController chestController)
         {
             if (_commandsHistory.ContainsKey(chestController) && _commandsHistory[chestController].Count > 0)
             {

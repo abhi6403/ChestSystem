@@ -1,6 +1,5 @@
 using ChestSystem.Chest;
 using ChestSystem.Player;
-using UnityEngine;
 
 namespace ChestSystem.Commands
 {
