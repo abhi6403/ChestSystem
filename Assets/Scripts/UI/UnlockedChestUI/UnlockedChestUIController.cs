@@ -23,20 +23,15 @@ namespace ChestSystem.UI
                 _collectButton.onClick.AddListener(OnCollectButtonClicked);
                 _undoButton.onClick.AddListener(OnUndoButtonClicked);
             }
-
-            public void SetChestController(ChestController chestController)
-            {
-                _chestController = chestController;
-            }
-            
             private void OnUndoButtonClicked()
             {
                 SoundManager.Instance.Play(Sounds.BUTTONCLICK);
                 _chestController.UndoUnlockWithGems();
             }
-            public void InitializeImage(ChestModel chestModel)
+            public void Initialize(ChestModel chestModel)
             {
                 _chestImage.sprite = chestModel._chestClosedSprite;
+                _chestController = chestModel._chestController;
             }
             private void DisableUI()
             {

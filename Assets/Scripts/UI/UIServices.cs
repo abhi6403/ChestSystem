@@ -1,7 +1,6 @@
 using System;
 using ChestSystem.Chest;
 using ChestSystem.Event;
-using ChestSystem.StateMachine;
 using ChestSystem.UI.ChestStateUI;
 using UnityEngine;
 
@@ -9,11 +8,11 @@ namespace ChestSystem.UI
 {
     public class UIServices : MonoBehaviour
     {
-        public ChestService _chestService;
+        private ChestService _chestService;
 
-        [SerializeField] public UnlockChestUIController _unlockChestUIController;
-        [SerializeField] public UnlockedChestUIController _unlockedChestUIController;
-        [SerializeField] public OpenedChestUIController _openedChestUIController;
+        [SerializeField] private UnlockChestUIController _unlockChestUIController;
+        [SerializeField] private UnlockedChestUIController _unlockedChestUIController;
+        [SerializeField] private OpenedChestUIController _openedChestUIController;
 
         public UIServices(ChestService chestService)
         {
@@ -27,7 +26,7 @@ namespace ChestSystem.UI
             EventSubscriber();
         }
         
-        public void EventSubscriber()
+        private void EventSubscriber()
         {
             EventService.Instance.OnChestButtonClickedInLockedState.AddListener(OnChestButtonClickedInLockedState);
             EventService.Instance.OnChestButtonClickedInUnlockedState.AddListener(OnChestButtonClickedInUnlockedState);
@@ -52,25 +51,22 @@ namespace ChestSystem.UI
             _chestService.CreateChest();
         }
         
-        public void OnChestButtonClickedInLockedState(ChestModel chestModel)
+        private void OnChestButtonClickedInLockedState(ChestModel chestModel)
         {
-            _unlockChestUIController.InitializeImage(chestModel);
-            _unlockChestUIController.SetChestController(chestModel._chestController);
+            _unlockChestUIController.Initialize(chestModel);
             _unlockChestUIController.ShowUnlockWithGemsButton();
             _unlockChestUIController.gameObject.SetActive(true);
         }
 
-        public void OnChestButtonClickedInOpenedState(ChestModel chestModel)
+        private void OnChestButtonClickedInOpenedState(ChestModel chestModel)
         {
-            _openedChestUIController.SetChestController(chestModel._chestController);
             _openedChestUIController.Initialize(chestModel);
             _openedChestUIController.gameObject.SetActive(true);
         }
 
-        public void OnChestButtonClickedInUnlockedState(ChestModel chestModel)
+        private void OnChestButtonClickedInUnlockedState(ChestModel chestModel)
         {
-            _unlockedChestUIController.SetChestController(chestModel._chestController);
-            _unlockedChestUIController.InitializeImage(chestModel);
+            _unlockedChestUIController.Initialize(chestModel);
             _unlockedChestUIController.gameObject.SetActive(true);
         }
     }

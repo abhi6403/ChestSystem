@@ -1,8 +1,6 @@
 using ChestSystem.Chest;
-using ChestSystem.Event;
 using TMPro;
 using UnityEngine;
-using UnityEngine.Events;
 using UnityEngine.UI;
 
 namespace ChestSystem.UI
@@ -27,12 +25,9 @@ namespace ChestSystem.UI
             public void Initialize(ChestModel chestModel)
             {
                 _openedChestImage.sprite = chestModel._chestOpenSprite;
+                _chestController = chestModel._chestController;
                 SetCoinsText();
                 SetGemsText();
-            }
-            public void SetChestController(ChestController chestController)
-            {
-                _chestController = chestController;
             }
             
             private void DisableUI()

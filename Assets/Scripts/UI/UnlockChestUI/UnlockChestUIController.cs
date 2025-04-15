@@ -29,14 +29,11 @@ namespace ChestSystem.UI
                 
                 EventService.Instance.UnableToUnlockChest.AddListener(WarningUI);
             }
-            public void SetChestController(ChestController chestController)
-            {
-                _chestController = chestController;
-            }
             
-            public void InitializeImage(ChestModel chestModel)
+            public void Initialize(ChestModel chestModel)
             {
                 _chestImage.sprite = chestModel._chestClosedSprite;
+                _chestController = chestModel._chestController;
             }
             private void OnUnlockWithGemsButtonClicked()
             {
