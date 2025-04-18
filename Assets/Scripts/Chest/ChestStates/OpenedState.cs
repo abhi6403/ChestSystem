@@ -19,6 +19,7 @@ namespace ChestSystem.Chest
             public void OnStateEnter()
             {
                 SoundManager.Instance.Play(Sounds.COLLECTED);
+                Owner._chestView.InitializeChestViewOnOpenedState();
                 AddGemsToPlayer();
                 AddCoinsToPlayer();
             }
@@ -37,6 +38,7 @@ namespace ChestSystem.Chest
                 int temp = Owner._chestModel._chestCurrentCoins;
                 EventService.Instance.OnCoinsCollected.InvokeEvent(temp);
             }
+            
         }
     }
 }

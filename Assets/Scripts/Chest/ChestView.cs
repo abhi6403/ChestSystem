@@ -53,5 +53,14 @@ namespace ChestSystem.Chest
             yield return new WaitForSeconds(5);
             Destroy(gameObject);
         }
+        
+        public void InitializeChestViewOnOpenedState()
+        {
+            _chestOpenSprite.sprite = _chestController._chestModel._chestOpenSprite;
+            _chestOpenSprite.gameObject.SetActive(true);
+            _chestTimerText.gameObject.SetActive(false);
+            _chestClosedSprite.gameObject.SetActive(false);
+            _chestStatusText.gameObject.SetActive(false);
+        }
     }
 }

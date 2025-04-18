@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f5f1d404-dcd4-4615-940e-4248ac9cf26e" name="Changes" comment="" />
+    <list default="true" id="f5f1d404-dcd4-4615-940e-4248ac9cf26e" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ChestSystem/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ChestSystem/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Chest/ChestController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Chest/ChestController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Chest/ChestStates/OpenedState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Chest/ChestStates/OpenedState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Chest/ChestView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Chest/ChestView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/UnlockedChestUI/UnlockedChestUIController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/UnlockedChestUI/UnlockedChestUIController.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -34,7 +40,7 @@
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "Bug-Fixes",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -45,6 +51,14 @@
   }
 }]]></component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="D:/games/ChestV1\ChestSystem.exe" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="D:\games\ChestV1" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\6000.0.36f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-projectPath &quot;E:\Outscal\Placement Phase 4\Chest System\ChestSystem&quot; -debugCodeOptimization" />
@@ -106,6 +120,7 @@
       <workItem from="1744541276566" duration="9824000" />
       <workItem from="1744607748386" duration="7713000" />
       <workItem from="1744682591604" duration="4503000" />
+      <workItem from="1744942260994" duration="697000" />
     </task>
     <servers />
   </component>
