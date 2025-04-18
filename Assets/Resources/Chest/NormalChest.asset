@@ -20,5 +20,5 @@ MonoBehaviour:
     _maxCoins: 200
     _minGems: 10
     _maxGems: 20
-  _chestTimer: 10
+  _chestTimer: 900
   _chestPrefab: {fileID: 5949830040679103592, guid: 9160b4f3a58db0b47aa8a7a1e319cf9a, type: 3}

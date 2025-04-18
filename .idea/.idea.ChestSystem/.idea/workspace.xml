@@ -6,9 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="f5f1d404-dcd4-4615-940e-4248ac9cf26e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ChestSystem/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ChestSystem/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Command/ConcreteCommand/UnlockChestWithGems.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Command/ConcreteCommand/UnlockChestWithGems.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Event/EventService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Event/EventService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Chest/EpicChest.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Chest/EpicChest.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Chest/NormalChest.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Chest/NormalChest.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Chest/ChestController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Chest/ChestController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/StateMachine/States.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/StateMachine/States.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/UnlockChestUI/UnlockChestUIController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/UnlockChestUI/UnlockChestUIController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Bangers SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Bangers SDF.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,7 +123,7 @@
       <workItem from="1744541276566" duration="9824000" />
       <workItem from="1744607748386" duration="7713000" />
       <workItem from="1744682591604" duration="4503000" />
-      <workItem from="1744942260994" duration="1457000" />
+      <workItem from="1744942260994" duration="6159000" />
     </task>
     <servers />
   </component>

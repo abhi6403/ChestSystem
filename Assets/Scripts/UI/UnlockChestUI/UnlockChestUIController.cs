@@ -71,7 +71,7 @@ namespace ChestSystem.UI
             { 
                 SoundManager.Instance.Play(Sounds.BUTTONCLICK);
                 DisableUI();
-                _chestController.UnlockChest();
+                _chestController.StartChestTimer();
             }
         }
     }

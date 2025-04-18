@@ -41,7 +41,7 @@ namespace ChestSystem.Chest
         
         public void Update()
         {
-            CheckForTimeLeft();
+            UnlockChest();
            _chestStateMachine.Update();
         }
         
@@ -60,12 +60,13 @@ namespace ChestSystem.Chest
         {
             EventService.Instance.OnChestButtonClickedInOpenedState.InvokeEvent(_chestModel);
         }
-        public void UnlockChest()
+        public void StartChestTimer()
         {
             SetStateMachineState(ChestState.UNLOCKING);
         }
 
-        private void CheckForTimeLeft()
+        
+        private void UnlockChest()
         {
             if (_chestModel._chestTimer <= 0 && _chestModel._chestState == ChestState.UNLOCKING)
             {
