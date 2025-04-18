@@ -21,6 +21,7 @@ namespace ChestSystem.Commands
             if (_gemsRequiredToUnlock <= _gemsCount)
             {
                 int _gemsLeft = _gemsCount - _gemsRequiredToUnlock;
+                EventService.Instance.OnUnlockWithGemsClicked.InvokeEvent();
                 _chestController._chestModel.SetChestState(ChestState.UNLOCKED);
                 _playerController.UpdateGems(_gemsLeft);
                 _chestController.SetStateMachineState(ChestState.UNLOCKED);

@@ -27,6 +27,7 @@ namespace ChestSystem.UI
             {
                 SoundManager.Instance.Play(Sounds.BUTTONCLICK);
                 _chestController.UndoUnlockWithGems();
+                DisableUI();
             }
             public void Initialize(ChestModel chestModel)
             {

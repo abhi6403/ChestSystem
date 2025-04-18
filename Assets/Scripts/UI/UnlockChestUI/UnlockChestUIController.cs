@@ -28,8 +28,14 @@ namespace ChestSystem.UI
                 _warningButton.onClick.AddListener(OnWarningButtonClicked);
                 
                 EventService.Instance.UnableToUnlockChest.AddListener(WarningUI);
+                EventService.Instance.OnUnlockWithGemsClicked.AddListener(DisableUI);
             }
-            
+
+            ~UnlockChestUIController()
+            {
+                EventService.Instance.UnableToUnlockChest.RemoveListener(WarningUI);
+                EventService.Instance.OnUnlockWithGemsClicked.RemoveListener(DisableUI);
+            }
             public void Initialize(ChestModel chestModel)
             {
                 _chestImage.sprite = chestModel._chestClosedSprite;
@@ -64,8 +70,8 @@ namespace ChestSystem.UI
             private void OnUnlockButtonClicked()
             { 
                 SoundManager.Instance.Play(Sounds.BUTTONCLICK);
-                _chestController.UnlockChest();
                 DisableUI();
+                _chestController.UnlockChest();
             }
         }
     }
